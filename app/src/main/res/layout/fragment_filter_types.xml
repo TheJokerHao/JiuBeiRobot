@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ee"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/shopping_list_flilter_height"
+        android:background="@color/color_white"
+        android:paddingLeft="@dimen/common_margin20dp"
+        android:paddingRight="@dimen/common_margin20dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/filter_close" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/shopping_list_flilter_all_type"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_size20sp" />
+    </RelativeLayout>
+
+    <View style="@style/bigHorizontalLine" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_all_type_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

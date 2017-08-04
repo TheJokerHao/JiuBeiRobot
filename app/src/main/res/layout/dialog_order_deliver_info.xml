@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lLayout_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin20dp"
+        android:background="@color/color_white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/common_margin60dp"
+        android:paddingLeft="@dimen/common_margin20dp"
+        android:paddingRight="@dimen/common_margin20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin24dp"
+            android:text="@string/order_detail_enter_deliver_title"
+            android:textColor="@color/color_33"
+            android:textSize="@dimen/common_size22sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dialog_order_edit_height"
+            android:layout_marginTop="@dimen/common_margin40dp"
+            android:background="@drawable/shape_order_list_all_time"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin20dp"
+                android:layout_marginRight="@dimen/common_margin10dp"
+                android:text="@string/order_detail_receive_title"
+                android:textColor="@color/color_33"
+                android:textSize="@dimen/common_size18sp" />
+
+            <EditText
+                android:id="@+id/dialog_order_consigor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:maxLength="30"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dialog_order_edit_height"
+            android:layout_marginTop="@dimen/common_margin10dp"
+            android:background="@drawable/shape_order_list_all_time"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin20dp"
+                android:layout_marginRight="@dimen/common_margin10dp"
+                android:text="@string/order_detail_phone_title"
+                android:textColor="@color/color_33"
+                android:textSize="@dimen/common_size18sp" />
+
+            <EditText
+                android:id="@+id/dialog_order_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/order_detail_phone_hint"
+                android:inputType="phone"
+                android:maxLines="11"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dialog_order_edit_height"
+            android:layout_marginTop="@dimen/common_margin10dp"
+            android:background="@drawable/shape_order_list_all_time"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin20dp"
+                android:layout_marginRight="@dimen/common_margin10dp"
+                android:text="@string/order_detail_logistic_title"
+                android:textColor="@color/color_33"
+                android:textSize="@dimen/common_size18sp" />
+
+            <EditText
+                android:id="@+id/dialog_order_logistic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/order_detail_logistic_hint"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dialog_order_edit_height"
+            android:layout_marginTop="@dimen/common_margin10dp"
+            android:background="@drawable/shape_order_list_all_time"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin20dp"
+                android:layout_marginRight="@dimen/common_margin10dp"
+                android:text="@string/order_detail_logistic_code_title"
+                android:textColor="@color/color_33"
+                android:textSize="@dimen/common_size18sp" />
+
+            <EditText
+                android:id="@+id/dialog_order_logistic_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/order_detail_logistic_code_hint"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_confirm"
+            style="@style/RedButtonStyle"
+            android:layout_marginTop="@dimen/common_margin30dp"
+            android:text="@string/order_detail_confirm_receive" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/user_dialog_delete_icon_size"
+        android:layout_height="@dimen/user_dialog_delete_icon_size"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/dialog_close_icon" />
+</RelativeLayout>

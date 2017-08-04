@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5"
+    android:orientation="vertical">
+
+    <com.fecmobile.jiubeirobot.common.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_margin55dp"
+                android:background="@color/color_white"
+                android:gravity="center"
+                android:text="@string/cellar_manage_storage_cellar_detail_title"
+                android:textColor="@color/color_04"
+                android:textSize="@dimen/common_size20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:background="@color/color_dd" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.fecmobile.jiubeirobot.common.view.BannerLayout
+                    android:id="@+id/blyt_photo_message"
+                    android:layout_width="@dimen/common_margin522dp"
+                    android:layout_height="match_parent"
+                    app:defaultImage="@mipmap/ic_launcher"
+                    app:indicatorMargin="10dp"
+                    app:indicatorShape="oval"
+                    app:indicatorSpace="2dp"
+                    app:scrollDuration="1100"
+                    app:selectedIndicatorColor="@color/red_text"
+                    app:selectedIndicatorHeight="6dp"
+                    app:selectedIndicatorWidth="6dp"
+                    app:unSelectedIndicatorColor="#f4f4f4"
+                    app:unSelectedIndicatorHeight="6dp"
+                    app:unSelectedIndicatorWidth="6dp"
+
+                    >
+
+                </com.fecmobile.jiubeirobot.common.view.BannerLayout>
+
+
+                <View
+                    android:layout_width="@dimen/line_height"
+                    android:layout_height="@dimen/common_margin522dp"
+                    android:background="@color/color_dd" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_white"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/common_margin20dp"
+                    android:paddingRight="@dimen/common_margin20dp">
+
+                    <TextView
+                        android:id="@+id/tv_cellar_detail_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin28dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:textColor="@color/color_04"
+                        android:textSize="@dimen/common_size18sp"
+                        tools:text="梦陇优选波尔多干红葡萄酒原装原瓶进口红酒" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin40dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/cellar_manage_storage_cellar_detail_type"
+                            android:textColor="@color/color_99"
+                            android:textSize="@dimen/common_size16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_cellar_detail_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/color_33"
+                            android:textSize="@dimen/common_size16sp"
+                            tools:text="@string/cellar_manage_storage_cellar_detail_type" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin28dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/cellar_manage_local_storage_cellar_detail_breed"
+                            android:textColor="@color/color_99"
+                            android:textSize="@dimen/common_size16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_cellar_detail_breed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:inputType="textMultiLine"
+                            android:textColor="@color/color_33"
+                            android:textSize="@dimen/common_size16sp"
+                            tools:text="葡萄品种" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin28dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/cellar_manage_storage_cellar_detail_brand"
+                            android:textColor="@color/color_99"
+                            android:textSize="@dimen/common_size16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_cellar_detail_brand"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/color_33"
+                            android:textSize="@dimen/common_size16sp"
+                            tools:text="@string/cellar_manage_storage_cellar_detail_brand" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin28dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/cellar_manage_storage_cellar_detail_production"
+                            android:textColor="@color/color_99"
+                            android:textSize="@dimen/common_size16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_cellar_detail_production"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/color_33"
+                            android:textSize="@dimen/common_size16sp"
+                            tools:text="@string/cellar_manage_storage_cellar_detail_production" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin28dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/cellar_manage_storage_cellar_detail_growing"
+                            android:textColor="@color/color_99"
+                            android:textSize="@dimen/common_size16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_cellar_detail_originName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/color_33"
+                            android:textSize="@dimen/common_size16sp"
+                            tools:text="产区" />
+
+
+                        <!--<LinearLayout-->
+                        <!--android:id="@+id/tv_cellar_detail_growing"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="vertical" />-->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin28dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/cellar_manage_storage_cellar_detail_time"
+                            android:textColor="@color/color_99"
+                            android:textSize="@dimen/common_size16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_cellar_detail_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/color_33"
+                            android:textSize="@dimen/common_size16sp"
+                            tools:text="@string/cellar_manage_storage_cellar_detail_time" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin28dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/cellar_manage_storage_cellar_detail_stock"
+                            android:textColor="@color/color_99"
+                            android:textSize="@dimen/common_size16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_cellar_detail_stock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/color_33"
+                            android:textSize="@dimen/common_size16sp"
+                            tools:text="@string/cellar_manage_storage_cellar_detail_stock" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/color_white"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/common_margin50dp"-->
+            <!--android:background="@color/color_ee"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingLeft="@dimen/common_margin30dp"-->
+            <!--android:paddingRight="@dimen/common_margin30dp">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="@dimen/common_margin0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="3"-->
+            <!--android:text="@string/cellar_manage_storage_cellar_detail_storage_member"-->
+            <!--android:textColor="@color/color_66"-->
+            <!--android:textSize="@dimen/common_size16sp" />-->
+
+            <!--<TextView-->
+            <!--android:layout_width="@dimen/common_margin0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="3"-->
+            <!--android:text="@string/cellar_manage_storage_cellar_detail_storage_start_time"-->
+            <!--android:textColor="@color/color_66"-->
+            <!--android:textSize="@dimen/common_size16sp" />-->
+
+            <!--<TextView-->
+            <!--android:layout_width="@dimen/common_margin0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="2"-->
+            <!--android:text="@string/cellar_manage_storage_cellar_detail_storage_year"-->
+            <!--android:textColor="@color/color_66"-->
+            <!--android:textSize="@dimen/common_size16sp" />-->
+
+            <!--<TextView-->
+            <!--android:layout_width="@dimen/common_margin0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="2"-->
+            <!--android:text="@string/cellar_manage_storage_cellar_detail_storage_number"-->
+            <!--android:textColor="@color/color_66"-->
+            <!--android:textSize="@dimen/common_size16sp" />-->
+
+            <!--<TextView-->
+            <!--android:layout_width="@dimen/common_margin0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="2"-->
+            <!--android:text="@string/cellar_manage_storage_cellar_detail_storage_all_number"-->
+            <!--android:textColor="@color/color_66"-->
+            <!--android:textSize="@dimen/common_size16sp" />-->
+            <!--</LinearLayout>-->
+
+            <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:id="@+id/recycler_cellar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+            <!--</LinearLayout>-->
+
+
+        </LinearLayout>
+
+    </com.fecmobile.jiubeirobot.common.MyScrollView>
+
+
+</LinearLayout>

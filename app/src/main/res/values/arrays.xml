@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="orderTimeList">
+        <item>全部时间</item>
+        <item>六个月</item>
+        <item>三个月</item>
+        <item>一个月</item>
+        <item>一个星期</item>
+    </array>
+
+</resources>

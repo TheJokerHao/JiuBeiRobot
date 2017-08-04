@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lLayout_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/user_dialog_delete_icon_padding"
+        android:background="@drawable/shape_delete_dialog_bg"
+        android:padding="@dimen/user_dialog_padding">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/user_dialog_padding">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/common_register"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/user_dialog_title_font_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin24dp"
+                    android:gravity="center"
+                    android:text="@string/user_send_msg_point"
+                    android:textSize="@dimen/common_size18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin15dp"
+                    android:background="@drawable/shape_input_circular_boder"
+                    android:padding="@dimen/common_margin15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:singleLine="true"
+                        android:text="@string/user_phone"
+                        android:textColor="@color/color_33"
+                        android:textSize="@dimen/common_size18sp" />
+
+                    <EditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common_margin24dp"
+                        android:background="@null"
+                        android:hint="@string/user_please_phone"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:maxLines="1"
+                        android:textSize="@dimen/common_size18sp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_next"
+                    style="@style/RedButtonStyle"
+                    android:layout_marginTop="@dimen/common_margin50dp"
+                    android:text="@string/common_next" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            style="@style/VerticalLine"
+            android:background="@color/color_e0" />
+
+        <LinearLayout
+            android:layout_width="@dimen/user_dialog_delete_qr_clu"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/user_dialog_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin15dp"
+                android:text="@string/user_existing_account"
+                android:textSize="@dimen/common_size14sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin10dp"
+                android:text="@string/user_immediately_login"
+                android:textColor="@color/actionsheet_blue"
+                android:textSize="@dimen/common_size18sp"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/common_margin15dp">
+
+                <ImageView
+                    android:id="@+id/iv_qr"
+                    android:layout_width="@dimen/user_dialog_qr_height"
+                    android:layout_height="@dimen/user_dialog_qr_height"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin10dp"
+                    android:text="@string/user_scan_attention"
+                    android:textSize="@dimen/common_size14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin6dp"
+                    android:text="@string/user_suprise"
+                    android:textSize="@dimen/common_size14sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/user_dialog_delete_icon_size"
+        android:layout_height="@dimen/user_dialog_delete_icon_size"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/dialog_close_icon" />
+</RelativeLayout>

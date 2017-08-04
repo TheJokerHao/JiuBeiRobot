@@ -1,0 +1,406 @@
+<resources>
+    <string name="app_name">久碑机器人</string>
+
+    <string name="error_call_back_server_error">服务器异常，请稍后再试！</string>
+    <string name="error_call_back_no_param">无效的请求资源！</string>
+    <string name="error_call_back_param_error">请求参数有误！</string>
+    <string name="error_call_back_no_permission">对不起，您没有相关操作权限！</string>
+    <string name="error_call_back_user_info_outtime">保存的用户信息过期，请重新登录！</string>
+    <string name="error_call_back_no_error">连接超时</string>
+
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="release_to_refresh">释放立即刷新</string>
+    <string name="refreshing">正在刷新...</string>
+    <string name="refresh_succeed">刷新成功</string>
+    <string name="refresh_fail">刷新失败</string>
+    <string name="pullup_to_load">正在加载</string>
+    <string name="release_to_load">释放立即加载</string>
+    <string name="loading">正在加载...</string>
+    <string name="submit_tip">正在提交...</string>
+    <string name="load">正在登录...</string>
+    <string name="title_load">登录</string>
+    <string name="load_succeed">加载成功</string>
+    <string name="load_fail">加载失败</string>
+    <string name="refresh_time">上次更新时间：</string>
+
+    <string name="common_jiubei_jiudao">久碑久道</string>
+    <string name="common_slogan">永久的口碑，是长久的生存之道</string>
+    <string name="common_back">返回</string>
+    <string name="common_comfirm">确定</string>
+    <string name="common_cancel">取消</string>
+    <string name="common_save">保存</string>
+    <string name="common_update">修改</string>
+    <string name="common_delete">删除</string>
+    <string name="common_next">下一步</string>
+    <string name="common_reset">重置</string>
+    <string name="common_register">注册</string>
+    <string name="common_terms_service">久碑服务条款</string>
+    <string name="common_check_code">验证码</string>
+    <string name="common_get_check_code">获取验证码</string>
+    <string name="common_graphic_details">图文详情</string>
+    <string name="common_buy_card">购物车</string>
+    <string name="common_to_home">回到首页</string>
+    <string name="common_continue_buy">继续购物</string>
+    <string name="common_personage">个人</string>
+    <string name="common_unit">单位</string>
+    <string name="common_save_success">保存成功</string>
+    <string name="common_success">成功</string>
+    <string name="common_all">全部</string>
+    <string name="common_point_phone_format_error">手机号码格式有误</string>
+    <string name="common_point_check_code">请输入验证码</string>
+    <string name="common_point_get_phone_code">请先获取验证码</string>
+    <string name="common_comfirm_delete">确认删除？</string>
+    <string name="common_cart_is_null">购物车无商品,请先选择商品</string>
+    <string name="common_is_init">初始化中</string>
+    <string name="common_is_defeated">初始化失败,请联系技术支持或重新启动。</string>
+    <string name="common_timeout_pay">超时未付款</string>
+    <string name="common_tourist">游客</string>
+    <string name="common_inventory">库存不足</string>
+    <string name="common_please_connec_driver">请选择设备</string>
+    <string name="common_adapter_no_support">设备不支持蓝牙连接</string>
+    <string name="common_pari_drivers">已配对的设备（首次连接请到“设置->蓝牙”配对。）</string>
+
+    <string name="title_shopping_search_input">搜索你想要的商品</string>
+
+    <string name="index_block_member_title">会员专区</string>
+    <string name="index_block_member_des">享受会员专属权益</string>
+    <string name="index_block_quick_title">快速购买</string>
+    <!--新添加的本地购买-->
+    <string name="index_block_local_title">本地购买</string>
+    <string name="index_block_local_des">酒窖自选，限时购买</string>
+
+    <string name="index_block_quick_des">无需注册，快速购买</string>
+    <string name="index_block_join_title">注册会员</string>
+    <string name="index_block_join_des">注册即可成为久碑会员</string>
+    <string name="index_block_des_title">酒窖介绍</string>
+    <string name="index_block_des_des">了解本酒窖文化</string>
+    <string name="index_block_manager_title">系统管理</string>
+    <string name="index_block_manager_des">酒窖工作人员登录入口</string>
+
+    <string name="shopping_list_flilter_year">年份</string>
+    <string name="shopping_list_flilter_default">默认</string>
+    <string name="shopping_list_flilter_sales">销量</string>
+    <string name="shopping_list_flilter_price">价格</string>
+    <string name="shopping_list_flilter_filter">筛选</string>
+    <string name="shopping_list_flilter_all_type">全部分类</string>
+    <string name="shopping_list_flilter_all">全部</string>
+    <string name="shopping_list_flilter_suggest">配餐建议</string>
+    <string name="shopping_list_shop_join">加入购物车</string>
+    <string name="shopping_list_shop">商品</string>
+    <string name="shopping_list_details">详情</string>
+    <string name="shopping_list_wine_type">类型</string>
+    <string name="shopping_list_alcoholic_strength">酒精度：</string>
+    <string name="shopping_list_low_price">最低价</string>
+    <string name="shopping_list_higt_price">最高价</string>
+    <string name="shopping_list_price_70_200">70-200</string>
+    <string name="shopping_list_price_200_500">200-500</string>
+    <string name="shopping_list_price_500_1500">500-1500</string>
+    <string name="shopping_list_year_2015">2015年</string>
+    <string name="shopping_list_year_2014">2014年</string>
+    <string name="shopping_list_year_2013">2013年</string>
+    <string name="shopping_list_price_brand">品牌</string>
+    <string name="shopping_list_flavor">口感</string>
+    <string name="shopping_list_particular_year">年份</string>
+    <string name="shopping_list_grape_variety">品种</string>
+    <string name="shopping_list_hot_recommend">热门推荐</string>
+    <string name="shopping_list_recent_search">最近搜索</string>
+    <string name="shopping_list_no_search_result">抱歉，没有找到符合条件的商品</string>
+    <string name="shopping_list_delete_search_recode">确定要清空最近搜索吗？</string>
+    <string name="shopping_list_price_filter_point">最低价不能大于最高价</string>
+    <string name="shopping_details_chateau">酒庄</string>
+    <string name="shopping_details_chateau_histoy">酒庄历史</string>
+    <string name="shopping_details_bilingual">品牌中英文</string>
+    <string name="shopping_details_standard">规格参数</string>
+    <!--商品详情的 参数配置-->
+    <string name="shopping_details_tvWineType">类型：</string>
+    <string name="shopping_details_tv_region">产区：</string>
+    <string name="shopping_details_tv_chateau">酒庄：</string>
+    <string name="shopping_details_tv_leavel">等级：</string>
+    <string name="shopping_details_tv_year">年份：</string>
+    <string name="shopping_details_tv_alcoholic_strength">酒精度：</string>
+    <string name="shopping_details_tv_grape_variety">葡萄品种：</string>
+    <string name="shopping_details_tv_colour_lustre">色泽：</string>
+    <string name="shopping_details_tv_fragrance">香气：</string>
+    <string name="shopping_details_tv_wine_Body">酒体：</string>
+    <string name="shopping_details_tv_taste">口感：</string>
+    <string name="shopping_details_tv_Capacity_specification">容量/规格：</string>
+    <string name="shopping_details_tv_Storage_conditions">储存条件：</string>
+    <string name="shopping_details_tv_Serving_Temp">饮用温度：</string>
+    <string name="shopping_details_tv_Ingesting_time">醒酒时间：</string>
+    <string name="shopping_details_tv_suggestion">配餐建议：</string>
+    <string name="shopping_details_tv_award">奖项：</string>
+    <string name="shopping_details_tv_score">评分：</string>
+
+
+    <string name="shopping_details_level">酒庄级别</string>
+    <string name="shopping_details_buy_now">立即购买</string>
+    <string name="shopping_details_producing">产地</string>
+    <string name="shopping_details_producing_area">产区</string>
+    <string name="shopping_details_alcoholic_strength">单瓶酒精度</string>
+    <string name="shopping_details_taste_type">口感</string>
+    <string name="shopping_details_taste">口感分类</string>
+    <string name="shopping_details_advice_from_ingesting">建议醒酒时间</string>
+    <string name="shopping_details_temperature">适饮温度</string>
+    <string name="shopping_details_suggest">配餐建议</string>
+    <string name="shopping_details_img_txt">图文详情</string>
+    <string name="shopping_details_price">价\t\t\t格：</string>
+    <string name="shopping_details_chateau_colon">酒\t\t\t庄：</string>
+    <string name="shopping_details_repertory">库\t\t\t存：</string>
+    <string name="shopping_details_inventory">价格：</string>
+    <string name="shopping_details_select_num">选择数量：</string>
+    <string name="shopping_cart_total_moeny">总金额</string>
+    <string name="shopping_cart_settle_accounts">去结算</string>
+    <string name="shopping_cart_total">商品总金额</string>
+    <string name="shopping_cart_total_count">共计</string>
+    <string name="shopping_cart_be_paid">待支付</string>
+    <string name="shopping_check_order">核对订单</string>
+    <string name="shopping_check_freight">运费</string>
+    <string name="shopping_check_submit_order">提交订单</string>
+    <string name="shopping_check_mode_distribution">配送方式</string>
+    <string name="shopping_check_please_mode_distribution">请选择配送方式</string>
+    <string name="shopping_check_please_address">请选择配送地址</string>
+    <string name="shopping_check_need_delivery">需要配送</string>
+    <string name="shopping_check_no_need_delivery">不需要</string>
+    <string name="shopping_check_invoice">开具发票</string>
+    <string name="shopping_check_invoice_type">发票类型</string>
+    <string name="shopping_check_no_invoice">不开发票</string>
+    <string name="shopping_check_general_invoice">普通发票</string>
+    <string name="shopping_check_add_val_invoice">增值税发票</string>
+    <string name="shopping_check_invoice_title">发票抬头</string>
+    <string name="shopping_check_input_company_info">填写公司信息</string>
+    <string name="shopping_check_unit_name_hint">公司名称（必须）</string>
+    <string name="shopping_check_pay_taxes">纳税人识别码（必须）</string>
+    <string name="shopping_check_register_address">注册地址（必须）</string>
+    <string name="shopping_check_phone">电话（必须）</string>
+    <string name="shopping_check_account_bank">开户银行（必须）</string>
+    <string name="shopping_check_bank_account">银行账号（必须）</string>
+    <string name="shopping_check_tiket_name">姓名（必须）</string>
+    <string name="shopping_check_tiket_address">地址</string>
+    <string name="shopping_check_tiket_details_address">详细地址</string>
+    <string name="shopping_check_tiket_phone">电话（必填）</string>
+    <string name="shopping_check_invoice_content">发票内容</string>
+    <string name="shopping_check_ticket_info">填写收票人信息</string>
+    <string name="shopping_check_invoice_detail">明细</string>
+    <string name="shopping_check_invoice_catering">餐饮采购</string>
+    <string name="shopping_check_invoice_person_hint">请输入姓名</string>
+    <string name="shopping_check_invoice_unit_hint">请填写单位名称</string>
+    <string name="shopping_check_shipping_address">收货地址</string>
+    <string name="shopping_check_input_shipping_address">请填写收货地址</string>
+    <string name="shopping_check_add_shipping_address">新增地址</string>
+    <string name="shopping_check_do_without">@string/shopping_check_no_need_delivery</string>
+    <string name="shopping_check_note_information">备注信息</string>
+    <string name="shopping_check_des_hint">选填，给我们留言（45个字以内）</string>
+    <string name="shopping_check_shop_manifest">商品清单</string>
+    <string name="shopping_check_edit_address">编辑地址</string>
+    <string name="shopping_check_consignee">收货人：</string>
+    <string name="shopping_check_consignee_hint">请输入收货人</string>
+    <string name="shopping_check_consignee_phone_hint">请输入收货人手机</string>
+    <string name="shopping_check_consignee_phone">收货人手机：</string>
+    <string name="shopping_check_details">详细地址</string>
+    <string name="shopping_check_details_hint">请输入详细地址</string>
+    <string name="shopping_pay_type">订单支付</string>
+    <string name="shopping_pay_type_please">请选择支付方式</string>
+    <string name="shopping_pay_alipay">支付宝支付</string>
+    <string name="shopping_pay_alipay_hint">支付服务由支付宝提供</string>
+    <string name="shopping_pay_wechatpay">微信支付</string>
+    <string name="shopping_pay_wechatpay_hint">推荐安装微信5.0及以上版本的用户使用</string>
+    <string name="shopping_pay_scan_wechatpay">请用微信扫一扫支付</string>
+    <string name="shopping_pay_scan_alipay">请用支付宝扫一扫支付</string>
+    <string name="shopping_pay_cashpay">现金支付</string>
+    <string name="shopping_pay_cashpay_hint">请联系服务员已确认支付完成并提货</string>
+    <string name="shopping_pay_success">恭喜您，已支付成功</string>
+    <string name="shopping_pay_order_pay">订单支付</string>
+    <string name="shopping_order_code">订单号</string>
+    <string name="shopping_pay_moeny">支付金额</string>
+
+    <string name="user_send_msg_point">我们将发送验证码到你的手机</string>
+    <string name="user_phone">手机号</string>
+    <string name="user_phone_code_hint">手机号码</string>
+    <string name="user_please_phone">请填写手机号码</string>
+    <string name="user_existing_account">已有久碑账号：</string>
+    <string name="user_immediately_login">立即登录</string>
+    <string name="user_immediately_register">立即注册</string>
+    <string name="user_scan_attention">扫码关注久碑公众号</string>
+    <string name="user_suprise">有惊喜哦！</string>
+    <string name="user_register">注册成功</string>
+    <string name="user_send_check_to_phone">已发送验证至：</string>
+    <string name="user_register_derault_consent">注册视为同意</string>
+    <string name="user_hint_note_check_code">短信验证码</string>
+    <string name="user_hint_pwd_format">6-20位数字、字母、符号组合</string>
+    <string name="user_hint_comfirm_pwd">再次填写密码</string>
+    <string name="user_set_pwd">设置密码</string>
+    <string name="user_pwd_format_error">密码格式有误</string>
+    <string name="user_pwd_repwd_no_fit">两次密码不一致</string>
+    <string name="user_send_check_code">请先发送验证码</string>
+    <string name="user_comfirm_pwd">确认密码</string>
+    <string name="user_identity_check">身份验证</string>
+    <string name="user_identity_error_point">抱歉，您还不是久碑会员，\n请点击下方立即注册</string>
+    <string name="user_service_clause">久碑服务条款</string>
+
+    <string name="cellar_wallk_into">走进酒窖</string>
+    <string name="cellar_video_des">视频介绍</string>
+    <string name="cellar_interior">酒窖内景</string>
+
+    <string name="cellar_manage_title">系统管理</string>
+    <string name="btn_local_manage">本地管理</string>
+    <string name="btn_finish_order">确认结账</string>
+
+    <string name="tv_local_jiujiao_Info">酒窖信息</string>
+
+    <string name="btn_open_door">开门</string>
+
+    <!--酒窖信息的text-->
+
+    <string name="jiujiao_Info_temperature">仓库温度：</string>
+    <string name="jiujiao_Info_humidity">仓库湿度：</string>
+    <string name="jiujiao_Info_opendoor">开门请求：</string>
+    <string name="jiujiao_Info_state">仓门状态：</string>
+    <string name="jiujioa_Info_doorstate">仓库状态：</string>
+
+    <!--本地管理-->
+    <string name="local_custmer_manage">客户管理</string>
+    <string name="local_save_manage">酒窖存储管理</string>
+    <string name="local_nosend">未发货</string>
+    <string name="local_order_manage">销售订单管理</string>
+    <string name="local_nopay">未付款</string>
+
+
+    <string name="cellar_manage_login_title">久碑久道</string>
+    <string name="cellar_manage_login_remark">永久的口碑，是长久的生存之道</string>
+    <string name="cellar_manage_login_account_hint">请输入登录帐号</string>
+    <string name="cellar_manage_login_password_hint">请输入登录密码</string>
+    <string name="cellar_manage_login_login">登录</string>
+    <string name="cellar_manage_login_login_forget">忘记密码？</string>
+    <string name="cellar_manage_sales_order">销售订单管理</string>
+    <string name="cellar_manage_cellar_storage">酒窖存储管理</string>
+    <string name="local_manage_customer_storage">客户管理</string>
+    <string name="cellar_manage_non_payment">未付款</string>
+    <string name="cellar_manage_non_deliver">未发货</string>
+    <string name="cellar_manage_their_wine">自有酒品</string>
+    <string name="cellar_manage_generation_remaining">代存储酒品</string>
+    <string name="cellar_manage_login_account_not_null">帐号不能为空</string>
+    <string name="cellar_manage_login_account_fail">帐号格式错误</string>
+    <string name="cellar_manage_login_password_not_null">密码不能为空</string>
+    <string name="cellar_manage_login_password_fail">密码格式错误</string>
+    <string name="cellar_manage_storage_cellar_type">类型：</string>
+    <string name="cellar_manage_storage_cellar_cellar">酒庄：</string>
+    <string name="cellar_manage_storage_cellar_all_storage">库存总量：</string>
+    <string name="cellar_manage_storage_cellar_detail_title">存储详情</string>
+    <string name="cellar_manage_storage_cellar_detail_name">梦陇优选波尔多干红葡萄酒原装原瓶进口红酒</string>
+    <string name="cellar_manage_storage_cellar_detail_type">酒品类别</string>
+    <string name="cellar_manage_storage_cellar_detail_breed">酒品品种</string>
+    <string name="cellar_manage_local_storage_cellar_detail_breed">葡萄品种</string>
+    <string name="cellar_manage_storage_cellar_detail_brand">酒品品牌</string>
+    <string name="cellar_manage_storage_cellar_detail_production">生产酒庄</string>
+    <string name="cellar_manage_storage_cellar_detail_growing">酒品产区</string>
+    <string name="cellar_manage_storage_cellar_detail_time">酒品年份</string>
+    <string name="cellar_manage_storage_cellar_detail_stock">酒窖库存</string>
+    <string name="cellar_manage_setting_title">设置</string>
+    <string name="cellar_manage_setting_exit">退出登录</string>
+    <string name="cellar_manage_setting_current_account">当前帐号</string>
+    <string name="cellar_manage_setting_change_password">修改密码</string>
+    <string name="cellar_manage_setting_change_login_password">修改登录密码</string>
+    <string name="cellar_manage_setting_close_system">关闭系统</string>
+    <string name="cellar_manage_setting_send_identifying_code">我们将发送验证码到你的手机</string>
+    <string name="cellar_manage_setting_phone_number">手机号</string>
+    <string name="cellar_manage_setting_make_phone_number">请填写手机号码</string>
+    <string name="cellar_manage_setting_find_password">找回密码</string>
+    <string name="cellar_manage_setting_phone_number_not_null">手机号不能为空</string>
+    <string name="cellar_manage_setting_phone_number_format_fail">手机号格式错误</string>
+    <string name="cellar_manage_setting_password_change_success">密码修改成功</string>
+    <string name="cellar_manage_storage_cellar_detail_storage_member">存储会员</string>
+    <string name="cellar_manage_storage_cellar_detail_storage_start_time">存入时间</string>
+    <string name="cellar_manage_storage_cellar_detail_storage_year">存储年限</string>
+    <string name="cellar_manage_storage_cellar_detail_storage_number">存储数量</string>
+    <string name="cellar_manage_storage_cellar_detail_storage_all_number">持有总量</string>
+    <string name="cellar_manage_setting_new_password">设置新密码</string>
+    <string name="cellar_manage_setting_new_password_again">再次填写新密码</string>
+    <string name="cellar_manage_confirm_new_password">确认新密码</string>
+    <string name="cellar_manage_please_confirm_new_password">请确认新密码</string>
+    <string name="cellar_manage_setting_password_rule">6-20位数字、字母、符号的组合</string>
+    <string name="cellar_manage_check_code_not_null">验证码不能为空</string>
+    <string name="cellar_manage_please_setting_new_password">请设置新密码</string>
+    <string name="cellar_manage_password_rule_not_please_setting">密码格式错误,请设置6-20位数字、字母、符号的组合</string>
+    <string name="cellar_manage_password_not_same_please_setting">密码不一致,请重新设置</string>
+
+
+    <string name="order_list_all">全部订单</string>
+    <string name="order_list_unpay">未付款</string>
+    <string name="order_list_unreceive">未发货</string>
+    <string name="order_list_finish">已完成</string>
+    <string name="order_list_all_time">全部时间</string>
+    <string name="order_list_title">销售订单</string>
+    <string name="order_list_code_title">订单号：</string>
+    <string name="order_list_member_title">下单会员：</string>
+    <string name="order_list_total_count">共%s笔订单</string>
+    <string name="order_list_total_money">合计金额：</string>
+    <string name="order_list_item_total">共%s件商品 订单总额：</string>
+    <string name="order_list_item_total2">共%s件商品 合计：</string>
+    <string name="order_detail_title">订单详情</string>
+    <string name="order_detail_member_name">下单会员</string>
+    <string name="order_detail_time">下单时间</string>
+    <string name="order_detail_payment_method">支付方式：</string>
+    <string name="order_detail_distribution">配送信息：</string>
+    <string name="order_detail_receiver">收件人信息：</string>
+    <string name="order_detail_receive_address">收件地址：</string>
+    <string name="order_detail_sender">发货人信息：</string>
+    <string name="order_detail_carrier_company">承运公司：</string>
+    <string name="order_detail_courier_count">快递单号：</string>
+    <string name="order_detail_invoice">发票信息：</string>
+    <string name="order_detail_invoice_type">发票类型：</string>
+    <string name="order_detail_invoice_head">发票抬头：</string>
+    <string name="order_detail_invoice_content">发票内容：</string>
+    <string name="order_detail_ordercode">订单编号：</string>
+    <string name="order_detail_already_pay">已付款</string>
+    <string name="order_detail_unpay">待付款</string>
+    <string name="order_detail_number_tip">数量X</string>
+    <string name="order_detail_invoice_none">不要发票</string>
+    <string name="order_detail_invoice_normal">普通发票</string>
+    <string name="order_detail_invoice_value">增值税发票</string>
+    <string name="order_search_hint">商品名称/订单号/会员帐号</string>
+    <string name="order_search_tip">请输入搜索条件</string>
+    <string name="order_status_operator_receivable">收款</string>
+    <string name="order_status_operator_print">打印小票</string>
+    <string name="order_status_operator_send">发货</string>
+    <string name="order_status_operator_finish">完成</string>
+    <string name="order_paytype_alipay">支付宝支付</string>
+    <string name="order_paytype_wechat">微信支付</string>
+    <string name="order_paytype_cash">现金支付</string>
+    <string name="order_paytype_card">刷卡支付</string>
+    <string name="order_paytype_default">未知</string>
+    <string name="order_detail_enter_deliver_title">填写发货信息</string>
+    <string name="order_detail_receive_title">发货人&#160;&#160;&#160;&#160;</string>
+    <string name="order_detail_phone_title">手机号码</string>
+    <string name="order_detail_logistic_title">快递公司</string>
+    <string name="order_detail_logistic_code_title">快递单号</string>
+    <string name="order_detail_logistic_code_hint">请输入快递单号</string>
+    <string name="order_detail_logistic_hint">请输入承运快递名称</string>
+    <string name="order_detail_phone_hint">请输入发货人手机号码</string>
+    <string name="order_detail_receive_hint">请检查发货人姓名</string>
+    <string name="order_detail_confirm_receive">确认发货</string>
+    <string name="order_detail_mobile_format_error">手机号码格式不正确</string>
+    <string name="order_dialog_type_title_receive">选择收款方式</string>
+    <string name="order_dialog_type_button1_receive">现金收款</string>
+    <string name="order_dialog_type_button2_receive">刷卡收款</string>
+    <string name="order_dialog_type_title_send">选择发货方式</string>
+    <string name="order_dialog_type_button1_send">自提</string>
+    <string name="order_dialog_type_button2_send">配送</string>
+    <string name="order_operator_success">操作成功</string>
+    <string name="order_success_success">提交成功</string>
+    <string name="order_finish_title">是否完成订单？</string>
+    <string name="order_detail_gongsi_content">公司信息：</string>
+    <string name="order_detail_shoupiao_name">收票人信息：</string>
+    <!--客户管理-->
+    <string name="title_customer_manager">客户管理</string>
+
+
+</resources>
+
+
+
+
+
+
+
+
+

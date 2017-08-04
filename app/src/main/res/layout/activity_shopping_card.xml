@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--顶部的标题-->
+    <include layout="@layout/title_search_icon_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.fecmobile.xrecyclerview.XRecyclerView
+            android:id="@+id/rv_shop_item"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <View style="@style/VerticalLine" />
+
+        <LinearLayout
+            android:layout_width="@dimen/common_right_nav_width"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/shopping_cart_total_height"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_margin20dp"
+                android:paddingRight="@dimen/common_margin20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shopping_cart_total"
+                    android:textColor="@color/color_99"
+                    android:textSize="@dimen/common_size18sp" />
+
+                <TextView
+                    android:id="@+id/tv_shop_total_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_size18sp"
+                    tools:text="￥10.00" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/line_bit_height"
+                android:background="@color/color_white"
+                android:paddingLeft="@dimen/common_margin20dp"
+                android:paddingRight="@dimen/common_margin20dp"
+                android:paddingTop="@dimen/common_margin24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shopping_cart_total_count"
+                    android:textColor="@color/color_99"
+                    android:textSize="@dimen/common_size18sp" />
+
+                <TextView
+                    android:id="@+id/tv_total_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_size18sp"
+                    tools:text="￥10.00" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:paddingBottom="@dimen/common_margin24dp"
+                android:paddingLeft="@dimen/common_margin20dp"
+                android:paddingRight="@dimen/common_margin20dp"
+                android:paddingTop="@dimen/common_margin24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/shopping_cart_be_paid"
+                    android:textColor="@color/color_99"
+                    android:textSize="@dimen/common_size18sp" />
+
+                <TextView
+                    android:id="@+id/tv_be_paid_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/color_main"
+                    android:textSize="@dimen/common_size25sp"
+                    tools:text="￥1220.56" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0px"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btn_settlement"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/shopping_cart_buttom_height"
+                android:background="@color/color_main"
+                android:text="@string/shopping_cart_settle_accounts"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/common_size20sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

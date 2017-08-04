@@ -1,0 +1,1133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/common_margin20dp"
+        android:paddingRight="@dimen/common_margin20dp">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/title_search_padingtop"
+            android:layout_marginTop="@dimen/title_search_padingtop"
+            android:src="@mipmap/filter_close" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/rlyt_shop_tab"
+                android:layout_width="@dimen/shopping_details_tab"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_shop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/shopping_list_shop"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_size20sp" />
+
+                <View
+                    android:id="@+id/v_shop_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/shopping_details_botom_line"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/black" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlyt_details_tab"
+                android:layout_width="@dimen/shopping_details_tab"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin30dp"
+                android:layout_marginRight="@dimen/common_margin30dp"
+                android:clickable="true"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/shopping_list_details"
+                    android:textColor="@color/color_66"
+                    android:textSize="@dimen/common_size20sp" />
+
+                <View
+                    android:id="@+id/v_details_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/shopping_details_botom_line"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/black"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlyt_history_tab"
+                android:layout_width="@dimen/shopping_details_tab"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_chateau_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/shopping_details_chateau"
+                    android:textColor="@color/color_66"
+                    android:textSize="@dimen/common_size20sp" />
+
+                <View
+                    android:id="@+id/v_chateau"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/shopping_details_botom_line"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/black"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_card"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="@dimen/title_search_margin"
+            android:clickable="true">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/card_gray_icon" />
+
+            <TextView
+                android:id="@+id/tv_shop_number"
+                style="@style/RedPoint" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View style="@style/HorizontalLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:id="@+id/sv_details"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.6">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_white"
+                android:orientation="vertical">
+
+                <com.fecmobile.jiubeirobot.common.view.BannerLayout
+                    android:id="@+id/bl_shop_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/shopping_details_carousel"
+                    app:defaultImage="@mipmap/ic_launcher"
+                    app:indicatorMargin="10dp"
+                    app:indicatorShape="oval"
+                    app:indicatorSpace="2dp"
+                    app:scrollDuration="1100"
+                    app:selectedIndicatorColor="@color/red_text"
+                    app:selectedIndicatorHeight="6dp"
+                    app:selectedIndicatorWidth="6dp"
+                    app:unSelectedIndicatorColor="#f4f4f4"
+                    app:unSelectedIndicatorHeight="6dp"
+                    app:unSelectedIndicatorWidth="6dp" />
+
+                <View
+                    style="@style/HorizontalLine"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin" />
+
+                <!--规格参数后面添加播放语音的按钮-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/common_margin20dp"
+                    android:paddingRight="@dimen/common_margin20dp">
+
+                    <View
+                        android:layout_width="4px"
+                        android:layout_height="@dimen/activity_horizontal_margin"
+                        android:background="@color/color_main" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common_margin10dp"
+                        android:text="@string/shopping_details_standard"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/common_size18sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <!--<ImageView-->
+                    <!--android:id="@+id/iv_guige"-->
+                    <!--android:layout_width="@dimen/common_margin20dp"-->
+                    <!--android:layout_height="@dimen/common_margin20dp"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_marginRight="@dimen/common_margin30dp"-->
+                    <!--android:src="@drawable/btn_speech_details" />-->
+                </LinearLayout>
+
+                <View
+                    style="@style/HorizontalBigLine"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <!--前面九个-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <!--类型-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/shopping_details_des_padding_12"
+                            android:paddingLeft="@dimen/shopping_details_des_padding">
+
+                            <TextView
+                                android:layout_width="@dimen/shopping_local_details_des_padding_125"
+                                android:layout_height="wrap_content"
+                                android:text="@string/shopping_details_tvWineType"
+                                android:textSize="@dimen/common_size16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_wine_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:inputType="textMultiLine"
+                                android:maxLines="2"
+                                android:text="类型"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+
+                        </LinearLayout>
+
+                        <!--产区-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/shopping_details_des_padding_12"
+                            android:paddingLeft="@dimen/shopping_details_des_padding">
+
+                            <TextView
+                                android:layout_width="@dimen/shopping_local_details_des_padding_125"
+                                android:layout_height="wrap_content"
+                                android:text="@string/shopping_details_tv_region"
+                                android:textSize="@dimen/common_size16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_region"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:inputType="textMultiLine"
+                                android:maxLines="2"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/common_size16sp"
+                                tools:text="@string/shopping_list_wine_type" />
+                        </LinearLayout>
+
+                        <!--酒庄-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/shopping_details_des_padding_12"
+                            android:paddingLeft="@dimen/shopping_details_des_padding">
+
+                            <TextView
+                                android:layout_width="@dimen/shopping_local_details_des_padding_125"
+                                android:layout_height="wrap_content"
+                                android:text="@string/shopping_details_tv_chateau"
+                                android:textSize="@dimen/common_size16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_chateau"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:inputType="textMultiLine"
+                                android:maxLines="2"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/common_size16sp"
+                                tools:text="@string/shopping_list_wine_type" />
+                        </LinearLayout>
+
+                        <!--等级-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/shopping_details_des_padding_12"
+                            android:paddingLeft="@dimen/shopping_details_des_padding">
+
+                            <TextView
+                                android:layout_width="@dimen/shopping_local_details_des_padding_125"
+                                android:layout_height="wrap_content"
+                                android:text="@string/shopping_details_tv_leavel"
+                                android:textSize="@dimen/common_size16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_leavel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:inputType="textMultiLine"
+                                android:maxLines="2"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/common_size16sp"
+                                tools:text="@string/shopping_list_wine_type" />
+                        </LinearLayout>
+
+                        <!--年份-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/shopping_details_des_padding_12"
+                            android:paddingLeft="@dimen/shopping_details_des_padding">
+
+                            <TextView
+                                android:layout_width="@dimen/shopping_local_details_des_padding_125"
+                                android:layout_height="wrap_content"
+                                android:text="@string/shopping_details_tv_year"
+                                android:textSize="@dimen/common_size16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_year"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:inputType="textMultiLine"
+                                android:maxLines="2"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/common_size16sp"
+                                tools:text="@string/shopping_list_wine_type" />
+                        </LinearLayout>
+
+                        <!--酒精度-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/shopping_details_des_padding_12"
+                            android:paddingLeft="@dimen/shopping_details_des_padding">
+
+                            <TextView
+                                android:layout_width="@dimen/shopping_local_details_des_padding_125"
+                                android:layout_height="wrap_content"
+                                android:text="@string/shopping_list_alcoholic_strength"
+                                android:textSize="@dimen/common_size16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_alcoholic_strength"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:inputType="textMultiLine"
+                                android:maxLines="2"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/common_size16sp"
+                                tools:text="@string/shopping_list_alcoholic_strength" />
+                        </LinearLayout>
+
+                        <!--葡萄品种-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/shopping_details_des_padding_12"
+                            android:paddingLeft="@dimen/shopping_details_des_padding">
+
+                            <TextView
+                                android:layout_width="@dimen/shopping_local_details_des_padding_125"
+                                android:layout_height="wrap_content"
+                                android:text="@string/shopping_details_tv_grape_variety"
+                                android:textSize="@dimen/common_size16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_grape_variety"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:inputType="textMultiLine"
+                                android:maxLines="2"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/common_size16sp"
+                                tools:text="@string/shopping_list_wine_type" />
+                        </LinearLayout>
+
+                        <!--色泽-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/shopping_details_des_padding_12"
+                            android:paddingLeft="@dimen/shopping_details_des_padding">
+
+                            <TextView
+                                android:layout_width="@dimen/shopping_local_details_des_padding_125"
+                                android:layout_height="wrap_content"
+                                android:text="@string/shopping_details_tv_colour_lustre"
+                                android:textSize="@dimen/common_size16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_colour_lustre"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:inputType="textMultiLine"
+                                android:maxLines="2"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/common_size16sp"
+                                tools:text="@string/shopping_list_wine_type" />
+                        </LinearLayout>
+                        <!--香气-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/shopping_details_des_padding_12"
+                            android:layout_marginTop="@dimen/shopping_details_des_padding_12"
+                            android:paddingLeft="@dimen/shopping_details_des_padding">
+
+                            <TextView
+                                android:layout_width="@dimen/shopping_local_details_des_padding_125"
+                                android:layout_height="wrap_content"
+                                android:text="@string/shopping_details_tv_fragrance"
+                                android:textSize="@dimen/common_size16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_fragrance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:inputType="textMultiLine"
+                                android:maxLines="2"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/common_size16sp"
+                                tools:text="@string/shopping_list_wine_type" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--后面九个-->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <!--酒体-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/shopping_details_des_padding_12"
+                            android:paddingLeft="@dimen/shopping_details_des_padding">
+
+                            <TextView
+                                android:layout_width="@dimen/shopping_local_details_des_padding_125"
+                                android:layout_height="wrap_content"
+                                android:text="@string/shopping_details_tv_wine_Body"
+                                android:textSize="@dimen/common_size16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_wine_Body"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:inputType="textMultiLine"
+                                android:maxLines="2"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/common_size16sp"
+                                tools:text="@string/shopping_list_wine_type" />
+                        </LinearLayout>
+
+                        <!--口感-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/shopping_details_des_padding_12"
+                            android:paddingLeft="@dimen/shopping_details_des_padding">
+
+                            <TextView
+                                android:layout_width="@dimen/shopping_local_details_des_padding_125"
+                                android:layout_height="wrap_content"
+                                android:text="@string/shopping_details_tv_taste"
+                                android:textSize="@dimen/common_size16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_taste"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:inputType="textMultiLine"
+                                android:maxLines="2"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/common_size16sp"
+                                tools:text="@string/shopping_list_wine_type" />
+                        </LinearLayout>
+
+                        <!--容量/规格-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/shopping_details_des_padding_12"
+                            android:paddingLeft="@dimen/shopping_details_des_padding">
+
+                            <TextView
+                                android:layout_width="@dimen/common_margin90dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/shopping_details_tv_Capacity_specification"
+                                android:textSize="@dimen/common_size16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_Capacity_specification"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:inputType="textMultiLine"
+                                android:maxLines="2"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/common_size16sp"
+                                tools:text="@string/shopping_list_wine_type" />
+                        </LinearLayout>
+
+                        <!--存储条件-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/shopping_details_des_padding_12"
+                            android:paddingLeft="@dimen/shopping_details_des_padding">
+
+                            <TextView
+                                android:layout_width="@dimen/shopping_local_details_des_padding_125"
+                                android:layout_height="wrap_content"
+                                android:text="@string/shopping_details_tv_Storage_conditions"
+                                android:textSize="@dimen/common_size16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_Storage_conditions"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:inputType="textMultiLine"
+                                android:maxLines="2"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/common_size16sp"
+                                tools:text="@string/shopping_list_wine_type" />
+                        </LinearLayout>
+
+                        <!--最佳饮用温度-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/shopping_details_des_padding_12"
+                            android:paddingLeft="@dimen/shopping_details_des_padding">
+
+                            <TextView
+                                android:layout_width="@dimen/shopping_local_details_des_padding_125"
+                                android:layout_height="wrap_content"
+                                android:text="@string/shopping_details_tv_Serving_Temp"
+                                android:textSize="@dimen/common_size16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_Serving_Temp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:inputType="textMultiLine"
+                                android:maxLines="2"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/common_size16sp"
+                                tools:text="@string/shopping_list_wine_type" />
+                        </LinearLayout>
+
+                        <!--建议醒酒时间  -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/shopping_details_des_padding_12"
+                            android:paddingLeft="@dimen/shopping_details_des_padding">
+
+                            <TextView
+                                android:layout_width="@dimen/shopping_local_details_des_padding_125"
+                                android:layout_height="wrap_content"
+                                android:text="@string/shopping_details_tv_Ingesting_time"
+                                android:textSize="@dimen/common_size16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_Ingesting_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:inputType="textMultiLine"
+                                android:maxLines="2"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/common_size16sp"
+                                tools:text="@string/shopping_list_alcoholic_strength" />
+                        </LinearLayout>
+
+                        <!--配餐建议-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/shopping_details_des_padding_12"
+                            android:paddingLeft="@dimen/shopping_details_des_padding">
+
+                            <TextView
+                                android:layout_width="@dimen/shopping_local_details_des_padding_125"
+                                android:layout_height="wrap_content"
+                                android:text="@string/shopping_details_tv_suggestion"
+                                android:textSize="@dimen/common_size16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_suggestion"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:inputType="textMultiLine"
+                                android:maxLines="2"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/common_size16sp"
+                                tools:text="@string/shopping_list_wine_type" />
+                        </LinearLayout>
+
+                        <!--奖项-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/shopping_details_des_padding_12"
+                            android:paddingLeft="@dimen/shopping_details_des_padding">
+
+                            <TextView
+                                android:layout_width="@dimen/shopping_local_details_des_padding_125"
+                                android:layout_height="wrap_content"
+                                android:text="@string/shopping_details_tv_award"
+                                android:textSize="@dimen/common_size16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_award"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:inputType="textMultiLine"
+                                android:maxLines="2"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/common_size16sp"
+                                tools:text="@string/shopping_list_wine_type" />
+                        </LinearLayout>
+
+                        <!--评分-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/shopping_details_des_padding_12"
+                            android:layout_marginTop="@dimen/shopping_details_des_padding_12"
+                            android:paddingLeft="@dimen/shopping_details_des_padding">
+
+                            <TextView
+                                android:layout_width="@dimen/shopping_local_details_des_padding_125"
+                                android:layout_height="wrap_content"
+                                android:text="@string/shopping_details_tv_score"
+                                android:textSize="@dimen/common_size16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_score"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:inputType="textMultiLine"
+                                android:maxLines="2"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/common_size16sp"
+                                tools:text="@string/shopping_list_wine_type" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="@dimen/shopping_details_des_padding_12"-->
+                <!--android:paddingLeft="@dimen/shopping_details_des_padding">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="@dimen/shopping_details_des_padding_125"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/shopping_list_wine_type"-->
+                <!--android:textSize="@dimen/common_size18sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_wine_type"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:ellipsize="end"-->
+                <!--android:maxLines="1"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="@dimen/common_size18sp"-->
+                <!--tools:text="@string/shopping_list_wine_type" />-->
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="@dimen/shopping_details_des_padding_12"-->
+                <!--android:paddingLeft="@dimen/shopping_details_des_padding">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="@dimen/shopping_details_des_padding_125"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/shopping_details_bilingual"-->
+                <!--android:textSize="@dimen/common_size18sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_bilingual"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:ellipsize="end"-->
+                <!--android:maxLines="1"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="@dimen/common_size18sp"-->
+                <!--tools:text="@string/shopping_list_wine_type" />-->
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="@dimen/shopping_details_des_padding_12"-->
+                <!--android:paddingLeft="@dimen/shopping_details_des_padding">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="@dimen/shopping_details_des_padding_125"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/shopping_details_level"-->
+                <!--android:textSize="@dimen/common_size18sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_details_level"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:ellipsize="end"-->
+                <!--android:maxLines="1"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="@dimen/common_size18sp"-->
+                <!--tools:text="@string/shopping_list_wine_type" />-->
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="@dimen/shopping_details_des_padding_12"-->
+                <!--android:paddingLeft="@dimen/shopping_details_des_padding">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="@dimen/shopping_details_des_padding_125"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/shopping_details_taste"-->
+                <!--android:textSize="@dimen/common_size18sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_taste"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:ellipsize="end"-->
+                <!--android:maxLines="1"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="@dimen/common_size18sp"-->
+                <!--tools:text="@string/shopping_list_wine_type" />-->
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="@dimen/shopping_details_des_padding_12"-->
+                <!--android:paddingLeft="@dimen/shopping_details_des_padding">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="@dimen/shopping_details_des_padding_125"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/shopping_details_advice_from_ingesting"-->
+                <!--android:textSize="@dimen/common_size18sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_from_ingesting"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:ellipsize="end"-->
+                <!--android:maxLines="1"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="@dimen/common_size18sp"-->
+                <!--tools:text="@string/shopping_list_wine_type" />-->
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="@dimen/shopping_details_des_padding_12"-->
+                <!--android:paddingLeft="@dimen/shopping_details_des_padding">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="@dimen/shopping_details_des_padding_125"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/shopping_details_temperature"-->
+                <!--android:textSize="@dimen/common_size18sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_from_temperature"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:ellipsize="end"-->
+                <!--android:maxLines="1"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="@dimen/common_size18sp"-->
+                <!--tools:text="@string/shopping_list_wine_type" />-->
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="@dimen/shopping_details_des_padding"-->
+                <!--android:layout_marginTop="@dimen/shopping_details_des_padding_12"-->
+                <!--android:paddingLeft="@dimen/shopping_details_des_padding">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="@dimen/shopping_details_des_padding_125"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/shopping_details_suggest"-->
+                <!--android:textSize="@dimen/common_size18sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_from_suggest"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:ellipsize="end"-->
+                <!--android:maxLines="1"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="@dimen/common_size18sp"-->
+                <!--tools:text="@string/shopping_list_wine_type" />-->
+                <!--</LinearLayout>-->
+
+                <View style="@style/HorizontalLine" />
+
+                <View style="@style/bigHorizontalLine" />
+
+                <View style="@style/HorizontalLine" />
+                <!--图文详情后面添加-->
+
+                <LinearLayout
+                    android:id="@+id/llyt_details_img_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin">
+
+                    <View
+                        android:layout_width="4px"
+                        android:layout_height="@dimen/activity_horizontal_margin"
+                        android:background="@color/color_main" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common_margin10dp"
+                        android:text="@string/shopping_details_img_txt"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/common_size18sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/iv_text_pic"
+                        android:layout_width="@dimen/common_margin20dp"
+                        android:layout_height="@dimen/common_margin20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/common_margin30dp"
+                        android:src="@drawable/btn_speech_details" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/HorizontalBigLine"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin" />
+
+
+                <com.fecmobile.jiubeirobot.common.MyWebView
+                    android:id="@+id/mwv_graphic_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin" />
+
+                <View style="@style/bigHorizontalLine" />
+
+                <View style="@style/HorizontalLine" />
+                <!--酒庄历史后面添加-->
+
+                <LinearLayout
+                    android:id="@+id/llyt_chateau_histoy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin">
+
+                    <View
+                        android:layout_width="4px"
+                        android:layout_height="@dimen/activity_horizontal_margin"
+                        android:background="@color/color_main" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common_margin10dp"
+                        android:text="@string/shopping_details_chateau_histoy"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/common_size18sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/iv_jiujiao_history"
+                        android:layout_width="@dimen/common_margin20dp"
+                        android:layout_height="@dimen/common_margin20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/common_margin30dp"
+                        android:src="@drawable/btn_speech_details" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/HorizontalBigLine"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin" />
+
+
+                <com.fecmobile.jiubeirobot.common.MyWebView
+                    android:id="@+id/mwv_chateau_histoy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin" />
+            </LinearLayout>
+        </ScrollView>
+
+        <View style="@style/VerticalLine" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/common_margin20dp">
+
+                <TextView
+                    android:id="@+id/tv_shop_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_size20sp"
+                    tools:text="法分开了附件是减肥减肥开始设计费" />
+
+                <TextView
+                    android:id="@+id/tv_chateau_name_en"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin6dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textSize="@dimen/common_size20sp"
+                    tools:text="法分开了附件是减肥减肥开始设计费" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/shopping_details_des_padding_12">
+
+                    <TextView
+                        android:layout_width="@dimen/shopping_details_des_padding_125"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shopping_details_price"
+                        android:textSize="@dimen/common_size18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/color_main"
+                        android:textSize="@dimen/common_size18sp"
+                        tools:text="@string/shopping_list_wine_type" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/shopping_details_des_padding_12">
+
+
+                    <TextView
+                        android:layout_width="@dimen/shopping_details_des_padding_125"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:text="@string/shopping_details_chateau_colon"
+                        android:textSize="@dimen/common_size18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_chateau_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/common_size18sp"
+                        tools:text="@string/shopping_list_wine_type" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/shopping_details_des_padding_12">
+
+                    <TextView
+                        android:layout_width="@dimen/shopping_details_des_padding_125"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shopping_details_repertory"
+                        android:textSize="@dimen/common_size18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ls_stock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/common_size18sp"
+                        tools:text="@string/shopping_list_wine_type" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin20dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/shopping_details_select_num"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/common_size18sp" />
+
+                    <com.fecmobile.jiubeirobot.common.view.CustomNumInputView
+                        android:id="@+id/cniv_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:clickable="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_add_to_card"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@color/color_33"
+                    android:text="@string/shopping_list_shop_join"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/common_size20sp" />
+
+                <Button
+                    android:id="@+id/btn_buy"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@color/color_main"
+                    android:text="@string/shopping_details_buy_now"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/common_size20sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

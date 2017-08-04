@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_search_icon_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_sub_height"
+        android:background="@color/color_white"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_graphic_details"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true">
+
+            <RadioButton
+                android:id="@+id/rb_graphic_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:button="@null"
+                android:clickable="false"
+                android:text="@string/common_graphic_details"
+                android:textColor="@color/color_cellar_tab_selector"
+                android:textSize="@dimen/common_size18sp" />
+
+
+            <ImageView
+                android:id="@+id/iv_play_detail"
+                android:layout_width="20dp"
+                android:layout_height="18dp"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/rb_graphic_details"
+                android:layout_marginLeft="@dimen/common_margin20dp"
+                android:src="@drawable/btn_speech_details" />
+
+
+            <View
+                android:id="@+id/v_graphic_details"
+                android:layout_width="@dimen/tab_line_widht_90"
+                android:layout_height="4px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:background="@color/color_main" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_video_des"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true">
+
+            <RadioButton
+                android:id="@+id/rb_cellar_video_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:button="@null"
+                android:clickable="false"
+                android:text="@string/cellar_video_des"
+                android:textColor="@color/color_cellar_tab_selector"
+                android:textSize="@dimen/common_size18sp" />
+
+            <View
+                android:id="@+id/v_cellar_video_des"
+                android:layout_width="@dimen/tab_line_widht_90"
+                android:layout_height="4px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:background="@color/color_main"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_cellar_interior"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true">
+
+            <RadioButton
+                android:id="@+id/rb_cellar_interior"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:button="@null"
+                android:clickable="false"
+                android:text="@string/cellar_interior"
+                android:textColor="@color/color_cellar_tab_selector"
+                android:textSize="@dimen/common_size18sp" />
+
+            <View
+                android:id="@+id/v_cellar_interior"
+                android:layout_width="@dimen/tab_line_widht_90"
+                android:layout_height="4px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:background="@color/color_main"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View style="@style/HorizontalLine" />
+
+    <FrameLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/color_white" />
+</LinearLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_margin="@dimen/common_margin10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收货人：" />
+
+
+        <TextView
+            android:id="@+id/tv_customer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="人名" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="@dimen/common_margin10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电话号码：" />
+
+
+        <TextView
+            android:id="@+id/tv_customer_telnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="人名" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="@dimen/common_margin10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收货地址：" />
+
+
+        <TextView
+            android:id="@+id/tv_customer_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="人名" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="@dimen/common_margin10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="邮箱：" />
+
+
+        <TextView
+            android:id="@+id/tv_customer_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="人名" />
+
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="邮编：" />
+
+
+        <TextView
+            android:id="@+id/tv_customer_ecode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="人名" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="@dimen/common_margin10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_isDefault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设为默认：" />
+
+
+        <TextView
+            android:layout_marginRight="@dimen/common_margin10dp"
+            android:id="@+id/tv_changeaddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="修改" />
+
+        <TextView
+            android:id="@+id/tv_deleateaddress"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:text="删除" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

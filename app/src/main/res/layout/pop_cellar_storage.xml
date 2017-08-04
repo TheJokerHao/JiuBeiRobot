@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/common_margin168dp"
+    android:layout_height="@dimen/common_margin152dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/llyt_pop_cellar_storage"
+        android:layout_width="@dimen/common_margin168dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/color_f5"
+        android:orientation="vertical" />
+</LinearLayout>

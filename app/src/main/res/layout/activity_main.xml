@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_index_bg"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/home_logo" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/index_block_height"
+            android:layout_marginTop="@dimen/index_logo_to_blocks"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llyt_main_member_block"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/index_block_margin"
+                android:layout_weight="1"
+                android:background="@color/color_block_member"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/index_block_icon_height"
+                    android:layout_height="@dimen/index_block_icon_height"
+                    android:src="@mipmap/home_member_buy" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/index_block_title_margin"
+                    android:text="@string/index_block_member_title"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/index_block_title_font_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/index_block_des_margin"
+                    android:text="@string/index_block_member_des"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/index_block_des_font_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llyt_fast_buy"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/color_block_quick"
+                android:layout_marginRight="@dimen/index_block_margin"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/index_block_icon_height"
+                    android:layout_height="@dimen/index_block_icon_height"
+                    android:src="@mipmap/home_fest_buy" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/index_block_title_margin"
+                    android:text="@string/index_block_quick_title"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/index_block_title_font_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/index_block_des_margin"
+                    android:text="@string/index_block_quick_des"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/index_block_des_font_size" />
+            </LinearLayout>
+
+            <!--新添加一个本地购买的入口-->
+            <LinearLayout
+                android:id="@+id/llyt_local_buy"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/color_block_local"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/index_block_icon_height"
+                    android:layout_height="@dimen/index_block_icon_height"
+                    android:src="@mipmap/home_local_buy" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/index_block_title_margin"
+                    android:text="@string/index_block_local_title"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/index_block_title_font_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/index_block_des_margin"
+                    android:text="@string/index_block_local_des"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/index_block_des_font_size" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/index_block_height"
+            android:layout_marginTop="@dimen/index_block_margin">
+
+            <LinearLayout
+                android:id="@+id/llyt_join"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/index_block_margin"
+                android:layout_weight="1"
+                android:background="@color/color_block_join"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/index_block_icon_height"
+                    android:layout_height="@dimen/index_block_icon_height"
+                    android:src="@mipmap/home_join" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/index_block_title_margin"
+                    android:text="@string/index_block_join_title"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/index_block_title_font_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/index_block_des_margin"
+                    android:text="@string/index_block_join_des"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/index_block_des_font_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llyt_cellar_des"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/index_block_margin"
+                android:layout_weight="1.5"
+                android:background="@color/color_block_des"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/index_block_icon_height"
+                    android:layout_height="@dimen/index_block_icon_height"
+                    android:src="@mipmap/home_des" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/index_block_title_margin"
+                    android:text="@string/index_block_des_title"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/index_block_title_font_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/index_block_des_margin"
+                    android:text="@string/index_block_des_des"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/index_block_des_font_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llyt_system_manage"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/color_block_manager"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/index_block_icon_height"
+                    android:layout_height="@dimen/index_block_icon_height"
+                    android:src="@mipmap/home_sys_manager" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/index_block_title_margin"
+                    android:text="@string/index_block_manager_title"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/index_block_title_font_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/index_block_des_margin"
+                    android:text="@string/index_block_manager_des"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/index_block_des_font_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!--<com.fecmobile.jiubeirobot.common.pullableview.PullToRefreshLayout2-->
+        <!--android:id="@+id/pull_to_refresh_layout"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/color_f5">-->
+
+        <!--<include layout="@layout/pulltpr_refresh_head" />-->
+
+        <!--<com.fecmobile.jiubeirobot.common.pullableview.PullableRecyclerView-->
+        <!--android:id="@+id/rv_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+        <!--<include layout="@layout/pulltpr_load_more" />-->
+        <!--</com.fecmobile.jiubeirobot.common.pullableview.PullToRefreshLayout2>-->
+    </LinearLayout>
+</LinearLayout>

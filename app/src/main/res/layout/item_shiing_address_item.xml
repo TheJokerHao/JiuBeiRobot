@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white">
+
+    <ImageView
+        android:id="@+id/iv_default_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/defualt_select_icon" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/address_name"
+                android:drawablePadding="@dimen/common_margin5dp"
+                android:gravity="center"
+                tools:text="龚会元" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin10dp"
+                android:drawableLeft="@mipmap/defualt_address_icon"
+                android:drawablePadding="@dimen/common_margin5dp"
+                android:gravity="center"
+                tools:text="广东省深圳市龙华新区1980文化创意产业园" />
+        </LinearLayout>
+
+        <View style="@style/HorizontalLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_margin50dp">
+
+            <LinearLayout
+                android:id="@+id/llyt_update"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/address_edit_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_margin5dp"
+                    android:text="@string/common_update"
+                    android:textSize="@dimen/common_size16sp" />
+            </LinearLayout>
+
+            <View style="@style/VerticalLine" />
+
+            <LinearLayout
+                android:id="@+id/llyt_delete"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/address_delete_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_margin5dp"
+                    android:text="@string/common_delete"
+                    android:textSize="@dimen/common_size16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

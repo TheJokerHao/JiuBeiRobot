@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/shopping_list_flilter_height"
+        android:paddingLeft="@dimen/common_margin20dp"
+        android:paddingRight="@dimen/common_margin20dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center|left"
+            android:text="原产地"
+            android:textColor="@color/color_default_font_color"
+            android:textSize="@dimen/shopping_list_flilter_font_size" />
+
+        <ToggleButton
+            android:id="@+id/tb_expand"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:button="@null"
+            android:checked="false"
+            android:drawableRight="@drawable/selector_shop_list_filter_filter"
+            android:gravity="center"
+            android:text="@string/shopping_list_flilter_all"
+            android:textColor="@color/color_33"
+            android:textSize="@dimen/shopping_list_flilter_font_size" />
+    </RelativeLayout>
+
+    <com.fecmobile.jiubeirobot.common.view.MyGridView
+        android:id="@+id/myrv_data_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="@dimen/shopping_list_filter_item_margin"
+        android:numColumns="3"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:verticalSpacing="@dimen/shopping_list_filter_item_margin" />
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/title_height"
+    android:background="@color/color_title_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/title_search_padingtop"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/title_search_padingtop">
+
+    <LinearLayout
+        android:id="@+id/llyt_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/back" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin10dp"
+            android:text="@string/common_back"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/title_search_back_font_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/title_search_margin"
+        android:layout_weight="1"
+        android:background="@drawable/shape_title_search_bg"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin10dp"
+            android:src="@mipmap/search" />
+
+        <EditText
+            android:id="@+id/et_search_input"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/common_margin10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/title_shopping_search_input"
+            android:imeOptions="actionSearch"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textColor="@color/color_white"
+            android:textColorHint="@color/color_white"
+            android:textSize="@dimen/title_search_input_font_size" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_card"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="@dimen/title_search_margin"
+        android:clickable="true">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/white_card_icon" />
+
+        <TextView
+            android:id="@+id/tv_shop_number"
+            android:layout_width="@dimen/shopping_cart_num_point"
+            android:layout_height="@dimen/shopping_cart_num_point"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/shape_num_point"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:textColor="@color/color_main"
+            android:textSize="@dimen/shopping_cart_num_font_size"
+            android:visibility="invisible"
+            tools:text="1" />
+    </RelativeLayout>
+
+
+</LinearLayout>

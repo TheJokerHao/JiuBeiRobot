@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <ImageView
+        android:id="@+id/iv_shop_img"
+        android:layout_width="@dimen/shopping_list_shop_join_cart_btn"
+        android:layout_height="@dimen/shopping_list_shop_join_cart_btn"
+        tools:src="@drawable/test_img" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:id="@+id/iv_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_size18sp"
+            tools:text="美艳不可方物：MOUTON ROTHSCHILD（法国）" />
+
+        <TextView
+            android:id="@+id/iv_shop_name_en"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin5dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:singleLine="true"
+            android:textSize="@dimen/common_size14sp"
+            tools:text="MOUTON ROTHSCHILD" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin10dp">
+
+            <TextView
+                android:id="@+id/iv_shop_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_main"
+                android:textSize="@dimen/common_size18sp"
+                tools:text="￥128.00" />
+
+            <TextView
+                android:id="@+id/iv_shop_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/common_size18sp"
+                tools:text="x1" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

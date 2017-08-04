@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--轮播图-->
+    <declare-styleable name="BannerLayoutStyle">
+        <attr name="selectedIndicatorColor" format="color|reference" />
+        <attr name="unSelectedIndicatorColor" format="color|reference" />
+        <attr name="titleBGColor" format="color|reference" />
+        <attr name="titleColor" format="color|reference" />
+
+
+        <attr name="indicatorShape" format="enum">
+            <enum name="rect" value="0" />
+            <enum name="oval" value="1" />
+        </attr>
+
+        <attr name="selectedIndicatorHeight" format="dimension|reference" />
+        <attr name="selectedIndicatorWidth" format="dimension|reference" />
+        <attr name="unSelectedIndicatorHeight" format="dimension|reference" />
+        <attr name="unSelectedIndicatorWidth" format="dimension|reference" />
+
+        <attr name="indicatorSpace" format="dimension|reference" />
+        <attr name="indicatorMargin" format="dimension|reference" />
+        <attr name="autoPlayDuration" format="integer|reference" />
+        <attr name="scrollDuration" format="integer|reference" />
+        <attr name="isAutoPlay" format="boolean" />
+        <attr name="defaultImage" format="integer|reference" />
+
+    </declare-styleable>
+
+    <declare-styleable name="Filter">
+        <attr name="titleTxt" format="string|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="IntervalSearch">
+        <attr name="titleText" format="string|reference" />
+        <attr name="lowTxt" format="string|reference" />
+        <attr name="higtTxt" format="string|reference" />
+        <attr name="higtHide" format="boolean|reference" />
+        <attr name="svFilter1" format="string|reference" />
+        <attr name="svFilter2" format="string|reference" />
+        <attr name="svFilter3" format="string|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="Hexagonattrs">
+        <attr name="HexagonBackground" format="reference" />
+        <attr name="logoBackground" format="reference" />
+        <attr name="titleHG" format="string" />
+        <attr name="titleColorHG" format="color" />
+        <attr name="titleSizeHG" format="dimension" />
+    </declare-styleable>
+
+</resources>

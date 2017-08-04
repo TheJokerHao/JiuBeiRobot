@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llyt_item_filter_bg"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/shopping_list_flilter_input_height"
+    android:clickable="true"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/common_margin10dp"
+    android:paddingRight="@dimen/common_margin10dp"
+    android:weightSum="1">
+
+    <!--android:visibility="gone"-->
+
+    <ImageView
+        android:id="@+id/iv_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/hook_icon" />
+
+    <ToggleButton
+        android:id="@+id/tb_item"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@null"
+        android:button="@null"
+        android:clickable="false"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textOff="@string/shopping_list_flilter_sales"
+        android:textOn="@string/shopping_list_flilter_sales"
+        android:textSize="@dimen/shopping_list_filter_item_font_size" />
+</LinearLayout>

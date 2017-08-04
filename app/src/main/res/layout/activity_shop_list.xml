@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dl_shop_conetn_and_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--DrawerLayout 默认显示的控件   -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--这里包含的是顶部的layout   其中返回按钮  搜索框  购物车按钮-->
+
+        <include layout="@layout/title_search_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/shopping_list_flilter_height"
+            android:background="@color/color_white">
+
+            <Button
+                android:id="@+id/btn_default"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/color_white"
+                android:text="@string/shopping_list_flilter_default"
+                android:textColor="@color/color_main"
+                android:textSize="@dimen/shopping_list_flilter_font_size" />
+
+            <View style="@style/VerticalLine" />
+
+            <Button
+                android:id="@+id/btn_sales"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/color_white"
+                android:text="@string/shopping_list_flilter_sales"
+                android:textColor="@color/color_33"
+                android:textSize="@dimen/shopping_list_flilter_font_size" />
+
+
+            <View
+                style="@style/VerticalLine"
+                android:layout_marginBottom="@dimen/common_margin5dp"
+                android:layout_marginTop="@dimen/common_margin5dp" />
+
+            <LinearLayout
+                android:id="@+id/llyt_price"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btn_price"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_white"
+                    android:text="@string/shopping_list_flilter_price"
+                    android:textColor="@color/color_33"
+                    android:textSize="@dimen/shopping_list_flilter_font_size" />
+
+                <ImageView
+                    android:id="@+id/iv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/price_default" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/VerticalLine"
+                android:layout_marginBottom="@dimen/common_margin5dp"
+                android:layout_marginTop="@dimen/common_margin5dp" />
+
+            <LinearLayout
+                android:id="@+id/llyt_shop_list_filter_filter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/btn_filter"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_white"
+                    android:text="@string/shopping_list_flilter_filter"
+                    android:textColor="@color/color_33"
+                    android:textSize="@dimen/shopping_list_flilter_font_size" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/filter" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View style="@style/HorizontalLine" />
+
+        <android.support.v4.widget.DrawerLayout
+            android:id="@+id/dlt_filter_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shop_list_bg"
+                android:paddingLeft="@dimen/common_margin24dp"
+                android:paddingRight="@dimen/common_margin4dp">
+
+                <com.fecmobile.xrecyclerview.XRecyclerView
+                    android:id="@+id/rv_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:listDivider="@color/color_trans" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_content"
+                android:layout_width="@dimen/shopping_list_stair_flilter"
+                android:layout_height="match_parent"
+                android:layout_gravity="right" />
+
+        </android.support.v4.widget.DrawerLayout>
+    </LinearLayout>
+
+    <!--DrawerLayout 滑出来的控件layout   -->
+
+    <FrameLayout
+        android:id="@+id/fl_shop_details"
+        android:layout_width="@dimen/shopping_list_shop_details_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="right">
+
+    </FrameLayout>
+</android.support.v4.widget.DrawerLayout>

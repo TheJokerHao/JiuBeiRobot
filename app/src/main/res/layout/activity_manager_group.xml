@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_manager_group"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/manager_pg"
+    android:orientation="vertical"
+    tools:context="com.fecmobile.jiubeirobot.ui.activity.cellar.manager.ManagerGroupActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin30dp"
+        android:layout_marginTop="@dimen/common_margin20dp">
+
+        <LinearLayout
+            android:id="@+id/llyt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/common_margin4dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/manage_back_black" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin10dp"
+                android:text="@string/common_back"
+                android:textColor="@color/color_default_font_color"
+                android:textSize="@dimen/title_search_back_font_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="@dimen/common_margin20dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="324dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/flower_top"
+
+                    />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tv_name_jiujiao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="酒窖名称"
+                    android:textSize="34sp" />
+
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/flower_mid" />
+            </LinearLayout>
+
+            <!--酒窖信息-->
+            <LinearLayout
+                android:id="@+id/ll_jiujiao_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/common_margin20dp"
+                android:layout_marginBottom="@dimen/common_margin40dp"
+                android:layout_marginLeft="@dimen/common_margin40dp"
+                android:background="@mipmap/kuang"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TVjiujiaoInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/common_margin40dp"
+                    android:text="@string/tv_local_jiujiao_Info"
+                    android:textSize="32sp" />
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:layout_margin="@dimen/common_margin10dp"
+                    android:src="@drawable/flower_buttom" />
+
+                <!-- android:scaleType="fitXY"-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_margin10dp"
+                    android:layout_marginBottom="@dimen/common_margin10dp"
+                    android:layout_marginRight="@dimen/common_margin10dp"
+                    android:layout_marginTop="@dimen/common_margin20dp"
+                    android:paddingLeft="150dp">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        style="@style/TVjiujiaoInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jiujiao_Info_temperature" />
+
+
+                    <TextView
+                        android:id="@+id/Temp_textView"
+                        style="@style/TVjiujiaoInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00.0" />
+
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        style="@style/TVjiujiaoInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="℃" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/common_margin10dp"
+                    android:paddingLeft="150dp">
+
+
+                    <TextView
+                        android:id="@+id/TextView06"
+                        style="@style/TVjiujiaoInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jiujiao_Info_humidity" />
+
+
+                    <TextView
+                        android:id="@+id/Humi_TextView"
+                        style="@style/TVjiujiaoInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLength="@integer/length10"
+                        android:text="00.0" />
+
+
+                    <TextView
+                        android:id="@+id/TextView02"
+                        style="@style/TVjiujiaoInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="%" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/common_margin10dp"
+                    android:paddingLeft="150dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/TextView11"
+                            style="@style/TVjiujiaoInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/jiujiao_Info_opendoor" />
+
+                        <TextView
+                            android:id="@+id/OpenDoorNub_TextView"
+                            style="@style/TVjiujiaoInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0001" />
+
+
+                        <Button
+                            android:id="@+id/OnLock_button"
+                            android:layout_width="70dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="30dp"
+                            android:background="@drawable/shape_tv_jiujiaoinfo"
+                            android:text="@string/btn_open_door"
+                            android:textColor="#FFFFFF"
+                            android:textSize="@dimen/common_size16sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_margin="@dimen/common_margin10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="150dp">
+
+
+                    <TextView
+                        android:id="@+id/TextView23"
+                        style="@style/TVjiujiaoInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jiujiao_Info_state" />
+
+
+                    <TextView
+                        android:id="@+id/DoorCondition_TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/common_size20sp"
+                        android:textColor="@color/default_status_abcd"
+                        android:text="仓门正常" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_margin="@dimen/common_margin10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="150dp">
+
+
+                    <TextView
+                        android:id="@+id/TextView27"
+                        style="@style/TVjiujiaoInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jiujioa_Info_doorstate" />
+
+
+                    <TextView
+                        android:id="@+id/WarehouseCondition_TextView"
+                        android:textSize="@dimen/common_size20sp"
+                        android:textColor="@color/default_status_abcd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="仓库正常" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!--两个按钮-->
+        <LinearLayout
+            android:id="@+id/ll_two_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/common_margin30dp"
+            android:layout_marginBottom="@dimen/common_margin20dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_sysmager"
+                android:layout_width="178px"
+                android:layout_height="51px"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="@dimen/common_margin30dp"
+                android:background="@drawable/shape_tv_jiujiaoinfo"
+                android:text="@string/cellar_manage_title"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btn_localmager"
+                android:layout_width="178px"
+                android:layout_height="51px"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/common_margin20dp"
+                android:background="@drawable/shape_tv_jiujiaoinfo"
+                android:text="@string/btn_local_manage"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="length10">10</integer>
+    <integer name="length50">50</integer>
+    <integer name="lenth256">256</integer>
+</resources>

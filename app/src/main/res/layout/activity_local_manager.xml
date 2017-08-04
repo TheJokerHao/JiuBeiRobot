@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fecmobile.jiubeirobot.ui.activity.cellar.manager.LocalManagerActivity">
+
+
+    <com.fecmobile.jiubeirobot.common.view.Hexagon
+        android:id="@+id/hex_order_manage"
+        android:layout_width="190dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/rl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/common_margin10dp"
+        android:layout_marginLeft="@dimen/common_margin10dp"
+        android:layout_marginRight="@dimen/common_margin10dp"
+        android:layout_marginTop="20dp"
+        app:HexagonBackground="@drawable/btn_localmanage_bg"
+        app:logoBackground="@drawable/local_manage_nopay"
+        app:titleColorHG="#fff"
+        app:titleHG="@string/local_nopay"
+        app:titleSizeHG="16sp" />
+
+
+    <com.fecmobile.jiubeirobot.common.view.Hexagon
+        android:id="@+id/hex_nosend"
+        android:layout_width="190dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/rl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/hex_order_manage"
+        app:HexagonBackground="@drawable/btn_localmanage_bg"
+        app:logoBackground="@drawable/local_manage_order_manage"
+        app:titleColorHG="#fff"
+        app:titleHG="@string/local_order_manage"
+        app:titleSizeHG="16sp" />
+
+
+    <com.fecmobile.jiubeirobot.common.view.Hexagon
+        android:id="@+id/hex_nopay"
+        android:layout_width="190dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/rl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/hex_order_manage"
+        app:HexagonBackground="@drawable/btn_localmanage_bg"
+        app:logoBackground="@drawable/local_manage_nosend"
+        app:titleColorHG="#fff"
+        app:titleHG="@string/local_nosend"
+        app:titleSizeHG="16sp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl"
+        android:layout_marginTop="155dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="490dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <com.fecmobile.jiubeirobot.common.view.Hexagon
+                android:id="@+id/hex_save_manage"
+                android:layout_width="190dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:paddingTop="10dp"
+                app:HexagonBackground="@drawable/btn_localmanage_bg"
+                app:logoBackground="@drawable/local_save_manage"
+                app:titleColorHG="#fff"
+                app:titleHG="@string/local_save_manage"
+                app:titleSizeHG="16sp" />
+
+            <com.fecmobile.jiubeirobot.common.view.Hexagon
+                android:id="@+id/hex_custmer_manage"
+                android:layout_width="190dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:paddingTop="10dp"
+                app:HexagonBackground="@drawable/btn_localmanage_bg"
+                app:logoBackground="@drawable/local_manage_custmer"
+                app:titleColorHG="#fff"
+                app:titleHG="@string/local_custmer_manage"
+                app:titleSizeHG="16sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#cb2f49">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingRight="@dimen/common_margin20dp">
+
+            <LinearLayout
+                android:id="@+id/ll_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/local_iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/back_witer" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_localmanage_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="@string/btn_local_manage"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/common_size20sp" />
+
+            <ImageView
+                android:id="@+id/local_iv_setting"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/setting_icon" />
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="@dimen/common_margin70dp"
+            android:gravity="center">
+
+            <com.fecmobile.jiubeirobot.common.view.CircularImageView
+                android:id="@+id/local_civ_head_photo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="110dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ss" />
+
+            <LinearLayout
+                android:id="@+id/local_tv_chateau"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin20dp"
+                android:layout_marginTop="92dp"
+                android:layout_toRightOf="@+id/local_civ_head_photo"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/local_tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/common_size18sp"
+                    tools:text="13430674043" />
+
+
+                <TextView
+                    android:id="@+id/local_tv_cellar_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/common_size18sp"
+                    tools:text="13430674043" />
+
+                <TextView
+                    android:id="@+id/local_tv_user_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/common_size22sp"
+                    tools:text="小虎" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

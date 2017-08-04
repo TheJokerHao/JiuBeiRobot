@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:orientation="horizontal"
+    android:padding="@dimen/common_margin24dp">
+
+    <ImageView
+        android:id="@+id/iv_shop_img"
+        android:layout_width="@dimen/shopping_cart_img_height"
+        android:layout_height="@dimen/shopping_cart_img_height"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/test_img" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/common_margin20dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_shop_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/color_33"
+                android:textSize="@dimen/common_size18sp"
+                tools:text="美艳不可方物：MOUTON ROTHSCHILD（法国）" />
+
+            <TextView
+                android:id="@+id/tv_brand_name_en"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin10dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="MOUTON ROTHSCHILD"
+                android:textColor="@color/color_99"
+                android:textSize="@dimen/common_size16sp" />
+
+            <TextView
+                android:id="@+id/tv_lsStock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin15dp"
+                android:textColor="@color/color_99"
+                android:textSize="@dimen/common_size16sp"
+                tools:text="库存：20瓶" />
+        </LinearLayout>
+
+        <com.fecmobile.jiubeirobot.common.view.CustomNumInputView
+            android:id="@+id/cniv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin20dp"
+            android:layout_marginRight="@dimen/common_margin20dp" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin20dp"
+            android:layout_marginRight="@dimen/common_margin20dp"
+            android:textColor="@color/color_main"
+            android:textSize="@dimen/common_size18sp"
+            tools:text="￥1288.88" />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/cart_close" />
+    </LinearLayout>
+</LinearLayout>

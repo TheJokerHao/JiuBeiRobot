@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/lLayout_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:background="@color/color_white"
+        android:paddingBottom="@dimen/common_margin60dp"
+        android:layout_margin="@dimen/common_margin20dp">
+
+        <TextView
+            android:id="@+id/tv_order_detail_send_type_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order_detail_enter_deliver_title"
+            android:textSize="@dimen/common_size22sp"
+            android:textColor="@color/color_33"
+            android:layout_marginTop="@dimen/common_margin24dp" />
+
+        <Button
+            android:id="@+id/btn_operator1"
+            android:layout_marginTop="@dimen/common_margin50dp"
+            android:layout_width="@dimen/dialog_button_width"
+            android:layout_height="@dimen/dialog_button_hight"
+            android:background="@drawable/shape_red_bound"
+            android:gravity="center"
+            android:textSize="@dimen/common_size20sp"
+            android:textColor="@color/color_main" />
+
+        <Button
+            android:id="@+id/btn_operator2"
+            android:layout_width="@dimen/dialog_button_width"
+            android:layout_height="@dimen/dialog_button_hight"
+            android:background="@color/color_main"
+            android:gravity="center"
+            android:textSize="@dimen/common_size20sp"
+            android:textColor="@color/color_white"
+            android:layout_marginTop="@dimen/common_margin30dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/user_dialog_delete_icon_size"
+        android:layout_height="@dimen/user_dialog_delete_icon_size"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/dialog_close_icon" />
+</RelativeLayout>

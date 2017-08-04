@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="black">#000000</color>
+    <color name="lucency_50">#cc000000</color>
+    <color name="color_33">#333333</color>
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="actionsheet_blue">#157ac5</color>
+    <color name="color_04">#040404</color>
+    <color name="color_ee">#EEEEEE</color>
+    <color name="color_e0">#e0e0e0</color>
+    <color name="color_6e">#6e6e6e</color>
+    <color name="color_66">#666666</color>
+    <color name="color_c8">#c8c8c8</color>
+    <color name="color_f5">#F5F5F5</color>
+    <color name="color_99">#999999</color>
+    <color name="color_dd">#DDDDDD</color>
+    <color name="color_f2">#f2f2f2</color>
+    <color name="color_412754">#412754</color>
+    <color name="color_1f1835">#1f1835</color>
+    <color name="color_white">#ffffff</color>
+    <color name="red_text">#B61C21</color>
+    <color name="color_trans">#00000000</color>
+    <color name="color_main">#cb2e48</color>
+    <color name="color_translucence">#80ffffff</color>
+
+    <color name="color_block_member">#da4150</color>
+    <color name="color_block_quick">#55cdbc</color>
+    //新增的本地购买的颜色
+    <color name="color_block_local">#45A452</color>
+    <color name="color_block_join">#3469ae</color>
+    <color name="color_block_des">#38a0d4</color>
+    <color name="color_block_manager">#896ece</color>
+
+    <color name="color_title_bg">@color/color_main</color>
+    <color name="color_shopping_cat">#ffb948</color>
+
+    <color name="color_default_font_color">@color/black</color>
+    <color name="color_hint_font_color">#999999</color>
+    <color name="color_gray_blue">#1379C1</color>
+    <color name="color_cellar_red">#CB2E48</color>
+
+    <color name="abde">#d9534f</color>
+    <color name="abcde">#5cb85c</color>
+
+    <color name="default_status_abcd">#1b8c1b</color>
+
+
+</resources>
+

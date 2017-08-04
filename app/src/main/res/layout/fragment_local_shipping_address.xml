@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ee"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_margin50dp"
+        android:background="@color/color_white"
+        android:paddingLeft="@dimen/common_margin20dp"
+        android:paddingRight="@dimen/common_margin20dp">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/filter_close" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/shopping_check_shipping_address"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_size18sp" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_local_address_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/common_margin10dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btn_local_new_add"
+        style="@style/RedButtonStyle"
+        android:layout_width="@dimen/common_btn_width_170"
+        android:layout_marginBottom="@dimen/common_margin40dp"
+        android:layout_marginTop="@dimen/common_margin40dp"
+        android:text="@string/shopping_check_add_shipping_address" />
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin130dp"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/common_margin15dp"
+        android:paddingBottom="@dimen/common_margin15dp">
+
+        <ImageView
+            android:id="@+id/item_order_detail_product_ico"
+            android:layout_width="@dimen/common_margin100dp"
+            android:layout_height="@dimen/common_margin100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/defualt_img"
+            android:contentDescription="@string/app_name" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/common_margin10dp">
+
+            <TextView
+                android:id="@+id/item_order_detail_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_33"
+                android:textSize="@dimen/common_size18sp"
+                android:text="梦拢优选波尔多干红葡萄酒原装进口红酒" />
+
+            <TextView
+                android:id="@+id/item_order_detail_product_introduce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_99"
+                android:layout_marginTop="@dimen/common_margin10dp"
+                android:textSize="@dimen/common_size18sp"
+                android:layout_below="@+id/item_order_detail_product_name"
+                android:text="CHATEAU LANESSAN" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="@dimen/common_margin10dp">
+
+                <TextView
+                    android:id="@+id/item_order_detail_product_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/common_size18sp"
+                    android:textColor="@color/color_main"
+                    android:text="￥128.00" />
+
+                <TextView
+                    android:id="@+id/item_order_detail_product_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/common_size18sp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/color_99"
+                    android:text="数量X1" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_ee" />
+
+</LinearLayout>

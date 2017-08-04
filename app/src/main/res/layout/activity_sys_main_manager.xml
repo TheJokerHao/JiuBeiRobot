@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/callar_main_manager_head_height"
+        android:background="@color/color_main">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/common_margin20dp">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/back_witer" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/cellar_manage_title"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/common_size20sp" />
+
+            <ImageView
+                android:id="@+id/iv_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/setting_icon" />
+        </LinearLayout>
+
+        <com.fecmobile.jiubeirobot.common.view.CircularImageView
+            android:id="@+id/civ_head_photo"
+            android:layout_width="@dimen/common_margin90dp"
+            android:layout_height="@dimen/common_margin90dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/common_margin90dp"
+            android:scaleType="centerCrop"
+            tools:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_user_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/civ_head_photo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/common_margin15dp"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/common_size22sp"
+            tools:text="13430674043" />
+
+        <LinearLayout
+            android:id="@+id/tv_chateau"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_user_account"
+            android:layout_marginTop="@dimen/common_margin15dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_cellar_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/civ_head_photo"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/common_size18sp"
+                tools:text="13430674043" />
+
+            <TextView
+
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/civ_head_photo"
+                android:layout_marginLeft="@dimen/common_margin30dp"
+                android:layout_toRightOf="@id/tv_chateau"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/common_size18sp"
+                tools:text="13430674043" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/common_margin20dp"
+        android:paddingLeft="@dimen/common_margin24dp"
+        android:paddingRight="@dimen/common_margin24dp"
+        android:paddingTop="@dimen/common_margin20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/lin_system_order_manager"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/color_white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="@dimen/callar_item_img_size"
+                    android:layout_height="@dimen/callar_item_img_size"
+                    android:src="@mipmap/sale_order_manage" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin10dp"
+                    android:text="@string/cellar_manage_sales_order"
+                    android:textColor="@color/color_66"
+                    android:textSize="@dimen/common_size18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_system_order_unpay"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/common_margin10dp"
+                android:layout_marginRight="@dimen/common_margin10dp"
+                android:layout_weight="1"
+                android:background="@color/color_white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/callar_item_img_size"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="@dimen/callar_item_img_size"
+                        android:layout_height="@dimen/callar_item_img_size"
+                        android:src="@mipmap/not_payment" />
+
+                    <TextView
+                        android:id="@+id/tv_non_payment"
+                        style="@style/RedPoint"
+                        android:layout_width="@dimen/margin_red_point"
+                        android:layout_height="@dimen/margin_red_point" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin10dp"
+                    android:text="@string/cellar_manage_non_payment"
+                    android:textColor="@color/color_66"
+                    android:textSize="@dimen/common_size18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_system_order_unsend"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/color_white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="@dimen/callar_item_img_size"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="@dimen/callar_item_img_size"
+                        android:layout_height="@dimen/callar_item_img_size"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@mipmap/not_send_goods" />
+
+                    <TextView
+                        android:id="@+id/tv_unfilled_orders"
+                        style="@style/RedPoint"
+                        android:layout_width="@dimen/margin_red_point"
+                        android:layout_height="@dimen/margin_red_point" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin10dp"
+                    android:text="@string/cellar_manage_non_deliver"
+                    android:textColor="@color/color_66"
+                    android:textSize="@dimen/common_size18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/common_margin20dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llyt_cellar_storage"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/color_white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/callar_item_img_size"
+                    android:layout_height="@dimen/callar_item_img_size"
+                    android:src="@mipmap/cellar_storage" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin10dp"
+                    android:text="@string/cellar_manage_cellar_storage"
+                    android:textColor="@color/color_66"
+                    android:textSize="@dimen/common_size18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llyt_my_cellar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/common_margin10dp"
+                android:layout_marginRight="@dimen/common_margin10dp"
+                android:layout_weight="1"
+                android:background="@color/color_white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="@dimen/callar_item_img_size"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="@dimen/callar_item_img_size"
+                        android:layout_height="@dimen/callar_item_img_size"
+                        android:src="@mipmap/my_cellar" />
+
+                    <TextView
+                        android:id="@+id/tv_own_wine_num"
+                        style="@style/RedPoint"
+                        android:layout_width="@dimen/margin_red_point"
+                        android:layout_height="@dimen/margin_red_point" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin10dp"
+                    android:text="@string/cellar_manage_their_wine"
+                    android:textColor="@color/color_66"
+                    android:textSize="@dimen/common_size18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llyt_agent_cellar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/color_white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="@dimen/callar_item_img_size"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="@dimen/callar_item_img_size"
+                        android:layout_height="@dimen/callar_item_img_size"
+                        android:src="@mipmap/agent_storage_cellar" />
+
+                    <TextView
+                        android:id="@+id/tv_generation_wine_num"
+                        style="@style/RedPoint"
+                        android:layout_width="@dimen/margin_red_point"
+                        android:layout_height="@dimen/margin_red_point" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin10dp"
+                    android:text="@string/cellar_manage_generation_remaining"
+                    android:textColor="@color/color_66"
+                    android:textSize="@dimen/common_size18sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_system_forget_pass_word_found"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/manage_logo_backgroup"
+
+    tools:context="com.fecmobile.jiubeirobot.ui.activity.cellar.manager.SystemForgetPassWordFoundActivity">
+
+    <LinearLayout
+        android:id="@+id/llyt_forget_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin30dp"
+        android:layout_marginTop="@dimen/common_margin20dp">
+
+        <LinearLayout
+            android:id="@+id/llyt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/manage_login_back" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin10dp"
+                android:text="@string/common_back"
+                android:textColor="@color/color_translucence"
+                android:textSize="@dimen/title_search_back_font_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="@dimen/common_margin498dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_margin20dp"
+            android:layout_marginRight="@dimen/common_margin20dp"
+            android:background="@color/color_white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/common_margin60dp"
+            android:paddingLeft="@dimen/common_margin30dp"
+            android:paddingRight="@dimen/common_margin30dp"
+            android:paddingTop="@dimen/common_margin24dp">
+
+            <TextView
+                android:id="@+id/tv_password_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/cellar_manage_setting_find_password"
+                android:textColor="@color/black"
+                android:textSize="@dimen/user_dialog_title_font_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin24dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_send_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_margin60dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/cellar_manage_setting_send_identifying_code"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_size18sp" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_margin60dp"
+                    android:background="@drawable/shape_input_circular_boder"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/common_margin100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common_margin20dp"
+                        android:layout_marginRight="@dimen/common_margin20dp"
+                        android:text="@string/common_check_code"
+                        android:textColor="@color/color_33"
+                        android:textSize="@dimen/common_size20sp" />
+
+                    <EditText
+                        android:id="@+id/et_sms_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/user_hint_note_check_code"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:maxLines="1"
+                        android:textColor="@color/color_99"
+                        android:textSize="@dimen/common_size18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="@dimen/line_height"
+                            android:layout_height="match_parent"
+                            android:background="@color/color_dd" />
+
+                        <TextView
+                            android:id="@+id/tv_get_code"
+                            android:layout_width="@dimen/common_margin152dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/common_margin10dp"
+                            android:paddingRight="@dimen/common_margin10dp"
+                            android:text="@string/common_get_check_code"
+                            android:textColor="@color/color_99"
+                            android:textSize="@dimen/common_size18sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_margin60dp"
+                    android:layout_marginTop="@dimen/common_margin10dp"
+                    android:background="@drawable/shape_input_circular_boder"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/common_margin100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common_margin20dp"
+                        android:layout_marginRight="@dimen/common_margin20dp"
+                        android:text="@string/cellar_manage_setting_new_password"
+                        android:textColor="@color/color_33"
+                        android:textSize="@dimen/common_size20sp" />
+
+                    <EditText
+                        android:id="@+id/et_setting_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/cellar_manage_setting_password_rule"
+                        android:inputType="textPassword"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:textColor="@color/color_99"
+                        android:textSize="@dimen/common_size18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_margin60dp"
+                    android:layout_marginTop="@dimen/common_margin10dp"
+                    android:background="@drawable/shape_input_circular_boder"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/common_margin100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common_margin20dp"
+                        android:layout_marginRight="@dimen/common_margin20dp"
+                        android:text="@string/cellar_manage_confirm_new_password"
+                        android:textColor="@color/color_33"
+                        android:textSize="@dimen/common_size20sp" />
+
+                    <EditText
+                        android:id="@+id/et_setting_password_again"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/cellar_manage_setting_new_password_again"
+                        android:inputType="textPassword"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:textColor="@color/color_99"
+                        android:textSize="@dimen/common_size18sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_exit"
+                style="@style/RedButtonStyle"
+                android:layout_height="54dp"
+                android:layout_marginTop="@dimen/user_dialog_padding"
+                android:text="@string/common_comfirm" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

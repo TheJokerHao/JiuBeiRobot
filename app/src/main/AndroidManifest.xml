@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fecmobile.jiubeirobot">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 主页面 activity -->
+
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 商城列表展示的activity -->
+        <activity
+            android:name=".ui.activity.shop.ShopListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <!-- 购物车 -->
+        <activity android:name=".ui.activity.shop.ShoppingCartActivity" />
+        <!-- 显示webView的 -->
+        <activity android:name=".ui.activity.WebViewActivity" />
+        <!-- 走进酒窖 -->
+        <activity
+            android:name=".ui.activity.cellar.walk.WalkIntoCellarActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="landscape" />
+        <!-- 商城核对订单 -->
+        <activity
+            android:name=".ui.activity.shop.UserCheckOrderActivity"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <!-- 选择订单支付方式 -->
+        <activity android:name=".ui.activity.shop.SelectOrderPayTypeActivity" />
+        <!-- 订单支付结果 -->
+        <activity android:name=".ui.activity.shop.OrderPayResultActivity" />
+        <!-- 二维码支付方式 -->
+        <activity
+            android:name=".ui.activity.shop.QRPayActivity"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <!-- 搜索 查询 -->
+        <activity
+            android:name=".ui.activity.shop.SearchShopActivity"
+            android:theme="@style/MyTrans" />
+        <!-- 登录系统管理 -->
+        <activity
+            android:name=".ui.activity.cellar.manager.LoginManageActivity"
+            android:theme="@style/MyTrans"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 存储酒窖 -->
+        <activity android:name=".ui.activity.cellar.manager.StorageCellarTabActivity" />
+        <!-- 系统管理的首页 -->
+        <activity android:name=".ui.activity.cellar.manager.SysMainManagerActivity" />
+        <!-- 订单列表 -->
+        <activity android:name=".ui.activity.cellar.manager.OrderListActivity" />
+        <!-- 订单搜索 -->
+        <activity android:name=".ui.activity.cellar.manager.OrderSearchActivity" />
+        <!-- 视频播放器全屏 -->
+        <activity
+            android:name=".ui.activity.FullVideoActivity"
+            android:theme="@style/BalckTheme" />
+        <!-- 忘记密码 -->
+        <activity android:name=".ui.activity.cellar.manager.SystemForgetPassWordActivity" />
+        <!-- 找回密码 -->
+        <activity android:name=".ui.activity.cellar.manager.SystemForgetPassWordFoundActivity" />
+        <!-- 检测扫码枪的后台服务 -->
+        <service android:name=".service.ScannerService" />
+        <!-- 扫码结果 -->
+        <activity
+            android:name=".ui.activity.ScanResultActivity"
+            android:theme="@style/TransparentActivityStyle" />
+        <!-- 本地购买的activity -->
+        <activity
+            android:name=".ui.activity.shop.LocalBuyActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+
+        <!-- 系统管理的第二个层级 这个activity主要为两个入口  一个是系统管理  一个是本地管理   以及一些酒窖信息的显示 -->
+        <activity
+            android:name=".ui.activity.cellar.manager.ManagerGroupActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape" />
+        <!-- 这是本地管理的activity -->
+        <activity android:name=".ui.activity.cellar.manager.LocalManagerActivity" />
+        <!-- 本地管理的酒窖库存管理 -->
+        <activity android:name=".ui.activity.cellar.manager.LocalStorageCellarTabActivity" />
+        <!-- 本地订单的显示 -->
+        <activity android:name=".ui.activity.cellar.manager.LocalOrderListActivity" />
+        <!-- 本地购买的订单核对  页面 -->
+        <activity
+            android:name=".ui.activity.shop.LocalUserCheckOrderActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 本地订单支付 -->
+        <activity android:name=".ui.activity.shop.LocalQRPayActivity" />
+        <!-- 本地订单选择支付方式 -->
+        <activity android:name=".ui.activity.shop.LocalSelectOrderPayTypeActivity" />
+        <!-- 客户管理 -->
+        <activity android:name=".ui.activity.cellar.manager.CustomerManagerActivity" />
+        <!-- 本地支付结果 -->
+        <activity android:name=".ui.activity.shop.LocalOrderPayResultActivity" />
+        <activity android:name=".ui.activity.cellar.manager.UpRobotInfoActivity" />
+        <activity
+            android:name=".ui.activity.shop.LocalSearchShopActivity"
+            android:theme="@style/MyTrans" />
+    </application>
+
+</manifest>

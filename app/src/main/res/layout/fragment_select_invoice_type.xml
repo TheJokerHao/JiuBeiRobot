@@ -1,0 +1,336 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ee"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_margin50dp"
+        android:background="@color/color_white"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/filter_close" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/shopping_check_invoice"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_size18sp" />
+    </RelativeLayout>
+
+    <com.fecmobile.jiubeirobot.common.MyScrollView
+        android:id="@+id/msv_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin10dp"
+                android:background="@color/color_white"
+                android:orientation="vertical"
+                android:padding="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shopping_check_invoice_type"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_size18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/activity_horizontal_margin">
+
+                    <com.fecmobile.jiubeirobot.common.view.BoderButtton
+                        android:id="@+id/bbtn_no_invoice"
+                        android:layout_width="@dimen/common_tab_btn_width"
+                        android:layout_height="@dimen/common_tab_btn_height" />
+
+                    <com.fecmobile.jiubeirobot.common.view.BoderButtton
+                        android:id="@+id/bbtn_general_invoice"
+                        android:layout_width="@dimen/common_tab_btn_width"
+                        android:layout_height="@dimen/common_tab_btn_height"
+                        android:layout_marginLeft="@dimen/common_margin10dp" />
+
+                    <com.fecmobile.jiubeirobot.common.view.BoderButtton
+                        android:id="@+id/bbtn_add_val_invoice"
+                        android:layout_width="@dimen/common_tab_btn_width"
+                        android:layout_height="@dimen/common_tab_btn_height"
+                        android:layout_marginLeft="@dimen/common_margin10dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llyt_invoice_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin10dp"
+                    android:background="@color/color_white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/activity_horizontal_margin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shopping_check_invoice_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/common_size18sp" />
+
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin10dp"
+                        android:checkedButton="@+id/rb_person"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@id/rb_person"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/common_personage"
+                            android:textSize="@dimen/common_size16sp" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/common_margin10dp"
+                            android:text="@string/common_unit"
+                            android:textSize="@dimen/common_size16sp" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/et_general_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin10dp"
+                        android:background="@drawable/shape_gray_editview_bg"
+                        android:hint="@string/shopping_check_invoice_person_hint"
+                        android:padding="@dimen/common_margin10dp"
+                        android:textSize="@dimen/common_size16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin10dp"
+                    android:background="@color/color_white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/activity_horizontal_margin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shopping_check_invoice_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/common_size18sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_invoiceContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin10dp"
+                        android:checkedButton="@+id/rb_invoiceContent_person">
+
+                        <RadioButton
+                            android:id="@id/rb_invoiceContent_person"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/common_personage"
+                            android:textSize="@dimen/common_size16sp" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_margin10dp"
+                            android:text="@string/shopping_check_invoice_catering"
+                            android:textSize="@dimen/common_size16sp" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llyt_appreciation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin10dp"
+                    android:background="@color/color_white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/activity_horizontal_margin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shopping_check_input_company_info"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/common_size18sp" />
+
+
+                    <EditText
+                        android:clickable="false"
+                        android:id="@+id/et_appreciation_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin20dp"
+                        android:background="@drawable/shape_gray_editview_bg"
+                        android:hint="@string/shopping_check_unit_name_hint"
+                        android:padding="@dimen/common_margin10dp"
+                        android:textSize="@dimen/common_size16sp" />
+
+                    <EditText
+                        android:id="@+id/et_ratepayer_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin10dp"
+                        android:background="@drawable/shape_gray_editview_bg"
+                        android:hint="@string/shopping_check_pay_taxes"
+                        android:padding="@dimen/common_margin10dp"
+                        android:textSize="@dimen/common_size16sp" />
+
+                    <com.fecmobile.jiubeirobot.common.NoMoveEditTextView
+                        android:id="@+id/et_company_reg_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin10dp"
+                        android:background="@drawable/shape_gray_editview_bg"
+                        android:hint="@string/shopping_check_register_address"
+                        android:padding="@dimen/common_margin10dp"
+                        android:textSize="@dimen/common_size16sp" />
+
+                    <EditText
+                        android:id="@+id/et_company_tel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin10dp"
+                        android:background="@drawable/shape_gray_editview_bg"
+                        android:hint="@string/shopping_check_phone"
+                        android:padding="@dimen/common_margin10dp"
+                        android:textSize="@dimen/common_size16sp" />
+
+                    <EditText
+                        android:id="@+id/et_deposit_bank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin10dp"
+                        android:background="@drawable/shape_gray_editview_bg"
+                        android:hint="@string/shopping_check_account_bank"
+                        android:padding="@dimen/common_margin10dp"
+                        android:textSize="@dimen/common_size16sp" />
+
+                    <EditText
+                        android:id="@+id/et_deposit_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin10dp"
+                        android:background="@drawable/shape_gray_editview_bg"
+                        android:hint="@string/shopping_check_bank_account"
+                        android:padding="@dimen/common_margin10dp"
+                        android:textSize="@dimen/common_size16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin10dp"
+                    android:background="@color/color_white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/activity_horizontal_margin">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shopping_check_ticket_info"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/common_size18sp" />
+
+                    <EditText
+                        android:id="@+id/et_invoice_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin20dp"
+                        android:background="@drawable/shape_gray_editview_bg"
+                        android:hint="@string/shopping_check_tiket_name"
+                        android:padding="@dimen/common_margin10dp"
+                        android:textSize="@dimen/common_size16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_addres"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin10dp"
+                        android:background="@drawable/shape_gray_editview_bg"
+                        android:hint="@string/shopping_check_tiket_address"
+                        android:padding="@dimen/common_margin10dp"
+                        android:textSize="@dimen/common_size16sp" />
+
+                    <com.fecmobile.jiubeirobot.common.AddressSelectedView
+                        android:id="@+id/llyt_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/shopping_check_time_height"
+                        android:layout_marginTop="@dimen/common_margin10dp"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/et_invoice_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin10dp"
+                        android:background="@drawable/shape_gray_editview_bg"
+                        android:hint="@string/shopping_check_tiket_details_address"
+                        android:padding="@dimen/common_margin10dp"
+                        android:textSize="@dimen/common_size16sp" />
+
+                    <EditText
+                        android:id="@+id/et_invoice_tel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin10dp"
+                        android:background="@drawable/shape_gray_editview_bg"
+                        android:hint="@string/shopping_check_tiket_phone"
+                        android:padding="@dimen/common_margin10dp"
+                        android:textSize="@dimen/common_size16sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.fecmobile.jiubeirobot.common.MyScrollView>
+
+
+    <Button
+        android:id="@+id/btn_submit_order"
+        style="@style/RedButtonStyle"
+        android:layout_height="@dimen/shopping_cart_buttom_height"
+        android:text="@string/common_comfirm" />
+</LinearLayout>

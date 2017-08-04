@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_search_icon_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin100dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/pay_success" />
+
+        <TextView
+            android:id="@+id/tv_felicitate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin20dp"
+            android:text="@string/shopping_pay_success"
+            android:textColor="@color/black"
+            android:textSize="@dimen/shopping_pay_success_font_size" />
+
+        <TextView
+            android:id="@+id/tv_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin10dp"
+            tools:text="@string/shopping_pay_success"
+            android:textSize="@dimen/common_size18sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin50dp">
+
+            <Button
+                android:id="@+id/btn_to_home"
+                android:layout_width="140dp"
+                android:layout_height="55dp"
+                android:background="@drawable/shape_gray_boder_btn_bg"
+                android:text="@string/common_to_home"
+                android:textSize="@dimen/common_size18sp" />
+
+            <Button
+                android:id="@+id/btn_continue_buy"
+                android:layout_width="140dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="@dimen/common_margin20dp"
+                android:background="@drawable/shape_main_color_boder_btn_bg"
+                android:text="@string/common_continue_buy"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/common_size18sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

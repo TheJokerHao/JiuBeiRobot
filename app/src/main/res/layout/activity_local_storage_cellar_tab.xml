@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_storage_cellar_tab"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--android:background="@color/color_dd"-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <include layout="@layout/title_type_search_title" />
+
+        <com.fecmobile.xrecyclerview.XRecyclerView
+            android:id="@+id/recycler_cellar_message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/common_margin20dp"
+            android:paddingLeft="@dimen/common_margin20dp"
+            android:paddingRight="@dimen/common_margin4dp" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_shop_details"
+        android:layout_width="@dimen/shopping_list_shop_details_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="right">
+
+    </FrameLayout>
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dl_order_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <include layout="@layout/title_search_icon_title" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_margin50dp"
+            android:background="@color/color_white">
+
+            <RadioGroup
+                android:id="@+id/rg_order_list_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_order_list_all"
+                    style="@style/orderListFilter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/order_list_all" />
+
+                <RadioButton
+                    android:id="@+id/rb_order_list_unpay"
+                    style="@style/orderListFilter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/order_list_unpay" />
+
+                <RadioButton
+                    android:id="@+id/rb_order_list_unsend"
+                    style="@style/orderListFilter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/order_list_unreceive" />
+
+                <RadioButton
+                    android:id="@+id/rb_order_list_finish"
+                    style="@style/orderListFilter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/order_list_finish" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_order_list_select_time"
+                android:layout_width="@dimen/margin130"
+                android:layout_height="@dimen/margin32"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/common_margin20dp"
+                android:background="@drawable/shape_order_list_all_time"
+                android:drawableRight="@mipmap/order_list_all_time_filter"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_margin10dp"
+                android:paddingRight="@dimen/common_margin10dp"
+                android:text="@string/order_list_all_time"
+                android:textColor="@color/color_33"
+                android:textSize="@dimen/common_size14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_order_finish_total"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_margin50dp"
+            android:layout_marginLeft="@dimen/common_margin20dp"
+            android:layout_marginRight="@dimen/common_margin20dp"
+            android:layout_marginTop="@dimen/common_margin10dp"
+            android:background="@color/color_white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/common_margin20dp"
+            android:paddingRight="@dimen/common_margin20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_order_finish_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="共23笔订单"
+                android:textColor="@color/color_33"
+                android:textSize="@dimen/common_size18sp" />
+
+            <TextView
+                android:id="@+id/tv_order_finish_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="共23笔订单"
+                android:textColor="@color/color_33"
+                android:textSize="@dimen/common_size18sp" />
+        </RelativeLayout>
+
+
+        <com.fecmobile.xrecyclerview.XRecyclerView
+            android:id="@+id/rv_order_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/common_margin20dp"
+            android:listDivider="@color/color_trans" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_order_detail"
+        android:layout_width="@dimen/order_detail_wide"
+        android:layout_height="match_parent"
+        android:layout_gravity="right" />
+</android.support.v4.widget.DrawerLayout>

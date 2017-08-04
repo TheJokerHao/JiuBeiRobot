@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lLayout_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin20dp"
+        android:paddingBottom="@dimen/common_margin100dp"
+        android:paddingTop="@dimen/common_margin24dp"
+        android:paddingRight="@dimen/common_margin30dp"
+        android:paddingLeft="@dimen/common_margin30dp"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/cellar_manage_setting_title"
+            android:textColor="@color/color_33"
+            android:textSize="@dimen/user_dialog_title_font_size" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/user_dialog_padding"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llty_current_account"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_height="@dimen/common_margin60dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cellar_manage_setting_current_account"
+                    android:textSize="@dimen/common_size18sp"
+                    android:textColor="@color/color_33" />
+
+                <TextView
+                    android:id="@+id/tv_current_account"
+                    android:text="13138895762"
+                    android:textSize="@dimen/common_size18sp"
+                    android:textColor="@color/color_99"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View style="@style/HorizontalLine" />
+
+            <LinearLayout
+                android:id="@+id/llty_change_password"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_height="@dimen/common_margin60dp">
+
+                <TextView
+                    android:textSize="@dimen/common_size18sp"
+                    android:textColor="@color/color_33"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cellar_manage_setting_change_password" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/next_witer" />
+
+
+            </LinearLayout>
+
+            <View style="@style/HorizontalLine" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_exit"
+            style="@style/RedButtonStyle"
+            android:layout_height="54dp"
+            android:layout_marginTop="@dimen/user_dialog_padding"
+            android:text="@string/cellar_manage_setting_exit" />
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/common_margin36dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_close_system"
+                android:drawablePadding="@dimen/common_margin10dp"
+                android:drawableLeft="@mipmap/manage_close"
+                android:textColor="@color/color_cellar_red"
+                android:textSize="@dimen/common_size20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cellar_manage_setting_close_system" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_close_dialog"
+        android:layout_width="@dimen/user_dialog_delete_icon_size"
+        android:layout_height="@dimen/user_dialog_delete_icon_size"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/dialog_close_icon" />
+</RelativeLayout>

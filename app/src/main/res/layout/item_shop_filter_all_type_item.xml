@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/shopping_list_flilter_height"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:textSize="@dimen/common_size18sp"
+        tools:text="12346" />
+
+    <TextView
+        android:id="@+id/tv_des"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/shopping_list_flilter_height"
+        android:layout_marginRight="@dimen/shopping_list_filter_item_year_margin"
+        android:layout_toLeftOf="@+id/iv_more"
+        android:gravity="center_vertical"
+        android:textColor="@color/color_6e"
+        android:textSize="@dimen/common_size18sp"
+        tools:text="12346" />
+
+    <ImageView
+        android:id="@id/iv_more"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/shopping_list_flilter_height"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:src="@mipmap/back_right" />
+</RelativeLayout>

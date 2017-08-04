@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ee"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_margin50dp"
+        android:background="@color/color_white"
+        android:paddingLeft="@dimen/common_margin20dp"
+        android:paddingRight="@dimen/common_margin20dp">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/filter_close" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/shopping_check_mode_distribution"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_size18sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin10dp"
+        android:background="@color/color_white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/common_margin20dp"
+        android:paddingRight="@dimen/common_margin20dp"
+        android:paddingTop="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shopping_check_please_mode_distribution"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_size18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/activity_horizontal_margin">
+
+            <com.fecmobile.jiubeirobot.common.view.BoderButtton
+                android:id="@+id/rb_no_need"
+                android:layout_width="@dimen/common_tab_btn_width"
+                android:layout_height="@dimen/common_tab_btn_height" />
+
+            <com.fecmobile.jiubeirobot.common.view.BoderButtton
+                android:id="@+id/rb_need"
+                android:layout_width="@dimen/common_tab_btn_width"
+                android:layout_height="@dimen/common_tab_btn_height"
+                android:layout_marginLeft="@dimen/common_margin10dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <com.fecmobile.jiubeirobot.common.view.EditTextWithDel
+        android:id="@+id/et_Telnumber"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/common_margin10dp"
+        android:layout_marginTop="@dimen/common_margin10dp"
+        android:hint="请输入手机号码"
+        android:background="@drawable/shape_local_distribution_num"
+        android:inputType="number"
+        android:maxLength="11"
+        android:padding="@dimen/common_margin10dp" />
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btn_submit_order"
+        style="@style/RedButtonStyle"
+        android:layout_height="@dimen/shopping_cart_buttom_height"
+        android:text="@string/common_comfirm" />
+</LinearLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lLayout_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_delete_dialog_bg"
+        android:orientation="vertical"
+        android:padding="@dimen/user_dialog_padding"
+        android:layout_marginLeft="@dimen/user_dialog_delete_icon_padding"
+        android:layout_marginRight="@dimen/user_dialog_delete_icon_padding"
+        android:layout_marginTop="22dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/common_jiubei_jiudao"
+            android:textColor="@color/color_33"
+            android:textSize="@dimen/user_dialog_title_font_size" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin10dp"
+            android:gravity="center"
+            android:text="@string/common_slogan"
+            android:textColor="@color/color_main"
+            android:textSize="@dimen/common_size18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/user_dialog_padding"
+            android:background="@drawable/shape_input_circular_boder"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="11"
+                android:layout_marginLeft="@dimen/common_margin10dp"
+                android:background="@null"
+                android:drawableLeft="@mipmap/phone_code_icon"
+                android:drawablePadding="@dimen/user_dialog_padding"
+                android:hint="@string/user_phone_code_hint"
+                android:paddingBottom="@dimen/common_margin20dp"
+                android:paddingLeft="@dimen/common_margin10dp"
+                android:paddingRight="@dimen/common_margin20dp"
+                android:paddingTop="@dimen/common_margin20dp"
+                android:singleLine="true"
+                android:textSize="@dimen/common_size18sp" />
+
+            <View style="@style/HorizontalLine" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/common_margin20dp">
+
+                <EditText
+                    android:id="@+id/et_phone_code"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLength="6"
+                    android:background="@null"
+                    android:drawableLeft="@mipmap/identity_check_icon"
+                    android:drawablePadding="@dimen/user_dialog_padding"
+                    android:hint="@string/user_hint_note_check_code"
+                    android:padding="@dimen/common_margin20dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/common_size18sp" />
+
+                <View style="@style/VerticalLine" />
+
+                <TextView
+                    android:id="@+id/tv_get_phone_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_margin10dp"
+                    android:gravity="center"
+                    android:text="@string/common_get_check_code"
+                    android:textColor="@color/color_main"
+                    android:textSize="@dimen/common_size16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_identity_check"
+            style="@style/RedButtonStyle"
+            android:layout_height="54dp"
+            android:layout_marginTop="@dimen/user_dialog_padding"
+            android:text="@string/user_identity_check" />
+
+        <TextView
+            android:id="@+id/tv_immediately_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin20dp"
+            android:text="@string/user_immediately_register"
+            android:textColor="@color/actionsheet_blue"
+            android:textSize="@dimen/common_size18sp" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/user_dialog_delete_icon_size"
+        android:layout_height="@dimen/user_dialog_delete_icon_size"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/dialog_close_icon" />
+
+
+</RelativeLayout>
