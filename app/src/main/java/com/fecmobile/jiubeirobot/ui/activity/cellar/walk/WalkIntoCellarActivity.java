@@ -91,7 +91,6 @@ public class WalkIntoCellarActivity extends BaseActivity {
     @Override
     public void initView() {
         APIManager.getInstance().getCellarInfo(this);
-        //
     }
 
     @Override
@@ -215,7 +214,6 @@ public class WalkIntoCellarActivity extends BaseActivity {
                 cellarVideoDesFragment.onPause();
                 transaction.hide(cellarVideoDesFragment);
             }
-
             transaction.commitAllowingStateLoss();
         }
     }

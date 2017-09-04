@@ -12,6 +12,8 @@ import android.util.Log;
 
 import com.fecmobile.jiubeirobot.receivers.ScannerReceivers;
 
+import java.util.Arrays;
+
 /**
  * 类描述    :监控扫码枪数据
  * 包名      : com.fecmobile.jiubeirobot.service
@@ -72,7 +74,7 @@ public class ScannerService extends Service {
                 intent.putExtra(ScannerReceivers.DATA, val);
                 sendBroadcast(intent);
                 //msg.arg1 可以获取接收字符长度
-                //Arrays.fill(scanner.scannerRx_Buffer, (byte) 0);
+                Arrays.fill(scanner.scannerRx_Buffer, (byte) 0);
                 break;
         }
     }

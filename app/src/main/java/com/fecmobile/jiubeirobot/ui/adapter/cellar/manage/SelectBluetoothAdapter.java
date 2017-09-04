@@ -2,14 +2,11 @@ package com.fecmobile.jiubeirobot.ui.adapter.cellar.manage;
 
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.fecmobile.jiubeirobot.R;
-import com.fecmobile.jiubeirobot.base.BaseMultiRecycleAdapter;
 import com.fecmobile.jiubeirobot.base.BaseRecycleAdapter;
 import com.fecmobile.jiubeirobot.base.BaseViewHolder;
-import com.fecmobile.jiubeirobot.base.IMultiItemType;
 import com.fecmobile.jiubeirobot.listener.ItemClick;
 
 import java.util.List;

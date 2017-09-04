@@ -53,7 +53,7 @@ public class MainActivity extends Activity {
     // Member object for the services
     public static BluetoothService mService = null;
     private EditText print_et;
-    private RadioGroup radioGroup1;
+    //    private RadioGroup radioGroup1;
     private RadioGroup radioGroup2;
     // private RadioGroup radioGroup3;
 
@@ -74,27 +74,27 @@ public class MainActivity extends Activity {
 
         print_et = (EditText) findViewById(R.id.print_et);
         print_connect_btn = (Button) findViewById(R.id.print_connect_btn);
-        radioGroup1 = (RadioGroup) findViewById(R.id.radioGroup1);
+//        radioGroup1 = (RadioGroup) findViewById(R.id.radioGroup1);
         radioGroup2 = (RadioGroup) findViewById(R.id.radioGroup2);
         // radioGroup3 = (RadioGroup) findViewById(R.id.radioGroup3);
 
-        radioGroup1.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                switch (checkedId) {
-//                    case R.id.radio0:
-//                        mService.printLeft();
-//                        break;
-//                    case R.id.radio1:
-//                        mService.printCenter();
-//                        break;
-//                    case R.id.radio2:
-//                        mService.printRight();
-//                        break;
-                }
-            }
-        });
+//        radioGroup1.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+//
+//            @Override
+//            public void onCheckedChanged(RadioGroup group, int checkedId) {
+//                switch (checkedId) {
+////                    case R.id.radio0:
+////                        mService.printLeft();
+////                        break;
+////                    case R.id.radio1:
+////                        mService.printCenter();
+////                        break;
+////                    case R.id.radio2:
+////                        mService.printRight();
+////                        break;
+//                }
+//            }
+//        });
 
         radioGroup2.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 

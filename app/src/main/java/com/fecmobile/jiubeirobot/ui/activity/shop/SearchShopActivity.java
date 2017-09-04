@@ -210,5 +210,3 @@ public class SearchShopActivity extends BaseActivity {
         confirmDropPointDialog.dismiss();
     }
 }
-
-

@@ -19,7 +19,6 @@ import com.fecmobile.jiubeirobot.bean.GrapevineBean;
 import com.fecmobile.jiubeirobot.bean.IdentityCheckResultBean;
 import com.fecmobile.jiubeirobot.bean.IsRegister;
 import com.fecmobile.jiubeirobot.bean.ListBean;
-import com.fecmobile.jiubeirobot.bean.LocalBean;
 import com.fecmobile.jiubeirobot.bean.LocalPayInfoBean;
 import com.fecmobile.jiubeirobot.bean.LocalQueryAddressBean;
 import com.fecmobile.jiubeirobot.bean.LocalQueryAddressOtherBean;
@@ -45,8 +44,7 @@ import com.fecmobile.jiubeirobot.bean.ShopListBean;
 import com.fecmobile.jiubeirobot.bean.StorageCellBean;
 import com.fecmobile.jiubeirobot.bean.StorageCellarTabDetailBean;
 import com.fecmobile.jiubeirobot.bean.VersionCodeBean;
-import com.fecmobile.jiubeirobot.common.Constants;
-import com.fecmobile.jiubeirobot.ui.activity.shop.LocalUserCheckOrderActivity;
+import com.fecmobile.jiubeirobot.utils.L;
 import com.fecmobile.jiubeirobot.utils.LP;
 import com.fecmobile.jiubeirobot.utils.SharedPreferencesUtils;
 import com.google.gson.Gson;
@@ -55,7 +53,6 @@ import com.google.gson.reflect.TypeToken;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import static com.fecmobile.jiubeirobot.data.net.URLS.URL_VERSION_CODE;
 
 public class APIManager {
     private static APIManager apiManager;
@@ -83,6 +80,7 @@ public class APIManager {
         try {
             //这里就是post需要提交的参数
             jsonObject.put("robotSign", BaseData.getBaseData().getROBOT_SIGN(BaseApplication.getInstance()));
+            L.i(BaseData.getBaseData().getROBOT_SIGN(BaseApplication.getInstance()));
 //            jsonObject.put("robotSign", "6c:fa:a7:62:a4:fa");
         } catch (JSONException e) {
             e.printStackTrace();
@@ -585,7 +583,6 @@ public class APIManager {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         iNetLoad.loadData(
                 FLags.FLAG_MEMBER_ORDER_SUBMIT,
                 URLS.URL_MEMBER_ORDER_SUBMIT, jsonObject, context, iNetResult, new TypeToken<BaseBean<ObjBean<OrderResultInfoBean>>>() {
@@ -1208,7 +1205,7 @@ public class APIManager {
         JSONObject jsonObject = new JSONObject();
         iNetLoad.loadData(
                 FLags.FLAG_VERSION_CODE,
-                URL_VERSION_CODE, jsonObject, context, (INetResult) context, new TypeToken<BaseBean<ObjBean<VersionCodeBean>>>() {
+                URLS.URL_VERSION_CODE, jsonObject, context, (INetResult) context, new TypeToken<BaseBean<ObjBean<VersionCodeBean>>>() {
                 }.getType());
     }
 }

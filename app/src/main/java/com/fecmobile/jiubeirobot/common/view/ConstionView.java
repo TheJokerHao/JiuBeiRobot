@@ -70,7 +70,6 @@ public class ConstionView extends LinearLayout {
         etLow = (EditText) findViewById(R.id.et_low);
         etHigt = (EditText) findViewById(R.id.et_higt);
 
-
         textWatcher = new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

@@ -187,7 +187,7 @@
     <string name="shopping_check_shipping_address">收货地址</string>
     <string name="shopping_check_input_shipping_address">请填写收货地址</string>
     <string name="shopping_check_add_shipping_address">新增地址</string>
-    <string name="shopping_check_do_without">@string/shopping_check_no_need_delivery</string>
+    <string name="shopping_check_do_without">不需要</string>
     <string name="shopping_check_note_information">备注信息</string>
     <string name="shopping_check_des_hint">选填，给我们留言（45个字以内）</string>
     <string name="shopping_check_shop_manifest">商品清单</string>

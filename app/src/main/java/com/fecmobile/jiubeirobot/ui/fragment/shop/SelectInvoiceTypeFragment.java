@@ -53,7 +53,7 @@ public class SelectInvoiceTypeFragment extends BaseFragment {
     LinearLayout llytAppreciation;
     @BindView(R.id.btn_submit_order)
     Button btnSubmitOrder;
-    @BindView(R.id.rb_person)
+    @BindView(R.id.rb_geren)
     RadioButton rbPerson;
     @BindView(R.id.et_general_name)
     EditText etGeneralName;
@@ -81,11 +81,24 @@ public class SelectInvoiceTypeFragment extends BaseFragment {
     EditText etCompanyTel;
     @BindView(R.id.msv_scroll)
     MyScrollView msvScroll;
+    @BindView(R.id.ll_new)
+    LinearLayout llytNomal;
+    @BindView(R.id.rb_danwei)
+    RadioButton rbDanwei;
+    @BindView(R.id.rg_fapiao)
+    RadioGroup rg_fapiao;
 
     private UserCheckOrderActivity userCheckOrderActivity;
 
     private int type;//发票类型
     private String province, city, district;
+
+
+    //    普通发票
+    @BindView(R.id.et_nomal_code)//纳税号码
+            EditText etNomalcode;
+    @BindView(R.id.et_nomal_name)//电话
+            EditText et_nomal_name;
 
     @Override
     public int pageLayout() {
@@ -163,12 +176,35 @@ public class SelectInvoiceTypeFragment extends BaseFragment {
                 llytAppreciation.setVisibility(View.GONE);
                 break;
             case 1:
+//                this.type = 2;
+//                bbtnNoInvoice.setChecked(false);
+//                bbtnGeneralInvoice.setChecked(true);
+//                bbtnAddValInvoice.setChecked(false);
+//                llytInvoiceContent.setVisibility(View.VISIBLE);
+//                llytAppreciation.setVisibility(View.GONE);
                 this.type = 2;
                 bbtnNoInvoice.setChecked(false);
                 bbtnGeneralInvoice.setChecked(true);
                 bbtnAddValInvoice.setChecked(false);
                 llytInvoiceContent.setVisibility(View.VISIBLE);
                 llytAppreciation.setVisibility(View.GONE);
+
+                rg_fapiao.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup group, int checkedId) {
+                        switch (checkedId) {
+                            case R.id.rb_danwei:
+                                etGeneralName.setVisibility(View.GONE);
+                                llytNomal.setVisibility(View.VISIBLE);
+                                break;
+                            case R.id.rb_geren:
+                                etGeneralName.setVisibility(View.VISIBLE);
+                                llytNomal.setVisibility(View.GONE);
+                                break;
+                        }
+                    }
+                });
+
                 break;
             case 2:
                 this.type = 3;
@@ -211,6 +247,9 @@ public class SelectInvoiceTypeFragment extends BaseFragment {
                             pramsBean.setInvoiceTitle(rbPerson.isChecked() ? "0" : "1");
                             pramsBean.setCompanyName(etGeneralName.getText() + "");
                             pramsBean.setInvoiceContent(rbInvoiceContentPerson.isChecked() ? getString(R.string.common_personage) : getString(R.string.shopping_check_invoice_catering));
+                            pramsBean.setCompanyName(et_nomal_name.getText() + "");//公司名
+                            pramsBean.setRatepayerCode(etNomalcode.getText() + "");//纳税号码
+
                         } else if (type == 3) {
                             pramsBean.setCompanyName(etAppreciationName.getText() + "");
                             pramsBean.setRatepayerCode(etRatepayerCode.getText() + "");
@@ -234,9 +273,21 @@ public class SelectInvoiceTypeFragment extends BaseFragment {
 
     private boolean checkPage() {
         if (type == 2) {
-            if (TextUtils.isEmpty(etGeneralName.getText())) {
-                T.showToCenter(getString(R.string.shopping_check_invoice_person_hint));
-                return false;
+            if (rbPerson.isChecked()) {
+                if (TextUtils.isEmpty(etGeneralName.getText())) {
+                    T.showToCenter(getString(R.string.shopping_check_invoice_person_hint));
+                    return false;
+                }
+            }
+            if (rbDanwei.isChecked()) {
+                if (TextUtils.isEmpty(et_nomal_name.getText())) {
+                    T.showToCenter(getString(R.string.shopping_check_unit_name_hint));
+                    return false;
+                }
+                if (TextUtils.isEmpty(etNomalcode.getText())) {
+                    T.showToCenter(getString(R.string.shopping_check_pay_taxes));
+                    return false;
+                }
             }
         } else if (type == 3) {
             if (TextUtils.isEmpty(etAppreciationName.getText())) {

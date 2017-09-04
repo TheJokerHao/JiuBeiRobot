@@ -2,6 +2,7 @@ package com.fecmobile.jiubeirobot.base;
 
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
+import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.util.Log;
 
@@ -104,10 +105,6 @@ public class BaseData {
 
     public void addShop(StockBean bean, int num) {
         L.i("addShop：" + bean.toString());
-        //        if (cardShops.contains(bean)) {
-//            bean.setNum(bean.getNum() + num);
-//            return;
-//        }
         totalMoney = 0;
         cardNums = 0;
         boolean isAdd = true;
@@ -222,8 +219,11 @@ public class BaseData {
         ROBOT_SIGN = (String) SPUtil.get(application, Constants.ROBOT_SIGN_UUID_KEY, "");
         if (ROBOT_SIGN == null || ROBOT_SIGN.length() == 0) {
             WifiManager wm = (WifiManager) application.getSystemService(Context.WIFI_SERVICE);
-            String macAddress = wm.getConnectionInfo().getMacAddress();
+            WifiInfo wi = wm.getConnectionInfo();
+            String macAddress = wi.getMacAddress();
+            Log.d("print", "getROBOT_SIGN: 初始" + macAddress);
             ROBOT_SIGN = macAddress;
+
             if (ROBOT_SIGN == null || ROBOT_SIGN.length() == 0) {//从SP获取失败？
                 ROBOT_SIGN = DetectTool.getUUID();
             }

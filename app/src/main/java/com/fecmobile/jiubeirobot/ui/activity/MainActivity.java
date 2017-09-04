@@ -7,9 +7,11 @@ import android.net.Uri;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 
 import com.fecmobile.jiubeirobot.BuildConfig;
 import com.fecmobile.jiubeirobot.R;
@@ -62,6 +64,7 @@ public class MainActivity extends BaseActivity {
     //新增本地购买
     @BindView(R.id.llyt_local_buy)
     LinearLayout llytLocalBuy;
+
 
     private RegisterUserDialog registerUserDialog;//注册的对话框的dialog
     private int currentState = 1;//机器人信息当前数据状态（是否请求成功）1、加载中  2、加载完成 3、加载失败
@@ -251,9 +254,11 @@ public class MainActivity extends BaseActivity {
             case R.id.llyt_main_member_block:
                 //入口一   会员入口
                 BaseApplication.currentMode = BaseApplication.MEMBER_BUY;
-                if (clickPage())
-                    //跳转到商品详情页 this 表示当前activity
+                if (clickPage()) {
                     Activitys.toShopList(this);
+                }
+                //跳转到商品详情页 this 表示当前activity
+
                 break;
             case R.id.llyt_join:
                 // 入口三   注册入口
@@ -269,13 +274,17 @@ public class MainActivity extends BaseActivity {
                 //入口二   快速购买的入口
                 BaseData.getBaseData().setIdentityCheckResultBean(new IdentityCheckResultBean());
                 BaseApplication.currentMode = BaseApplication.FAST_BUY;
-                if (clickPage())
+                if (clickPage()) {
                     Activitys.toShopList(this);
+                }
+
                 break;
             case R.id.llyt_system_manage:
                 // 入口五   系统管理入口
-                if (clickPage())
+                if (clickPage()) {
                     Activitys.toLoginManage(this);
+                }
+
                 break;
             //新增入口  本地购买  进入本地购买页面是不需要身份校验的  直接进入 定义个模式来供结账的时候判定  本地购买的值为2
             case R.id.llyt_local_buy:

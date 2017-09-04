@@ -274,8 +274,6 @@ public class OkHttpHelper {
             L.i("OkHttp GET url:" + url);
 
         } else if (httpMethodType == HttpMethodType.POST) {
-
-
             FormBody.Builder encodingBuilder = new FormBody.Builder();
 
             encodingBuilder.add("si", si);
@@ -288,6 +286,8 @@ public class OkHttpHelper {
             builder.post(body);
 
             L.i("OkHttp POST url:" + url + "?si=" + si + "&pa=" + pa);
+            L.i("OkHttp POST url:" + "si=" + si);
+            L.i("OkHttp POST url:" + "&pa==" + pa);
 
         }
 

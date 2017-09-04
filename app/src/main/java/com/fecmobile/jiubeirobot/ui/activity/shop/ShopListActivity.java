@@ -285,7 +285,6 @@ public class ShopListActivity extends BaseActivity implements DrawerLayout.Drawe
         switch (flag) {
             case FLags.FLAG_SHOP_LIST:
                 BaseBean<ListBean<ShopListBean>> listBeanBaseBean = bean;
-
                 pageUtils.setTotalNum(listBeanBaseBean.getData().getRowCount());
 
                 if (pageUtils.isCurentLoadMode()) {
@@ -313,11 +312,6 @@ public class ShopListActivity extends BaseActivity implements DrawerLayout.Drawe
             shopDetailsFragment.onResume();
             Log.d("print", "activityonResume: 数据不为空");
         }
-//        else{
-//            shopDetailsFragment = new ShopDetailsFragment();
-//            shopDetailsFragment.onResume();
-//            Log.d("print", "activityonResume: 数据为空");
-//        }
         setPrice();
     }
 
@@ -326,11 +320,6 @@ public class ShopListActivity extends BaseActivity implements DrawerLayout.Drawe
         switch (view.getId()) {
             case R.id.llyt_back:
                 finish();
-//                Intent intent = new Intent();
-//                intent.setAction(ScannerReceivers.ACTION);
-//                intent.putExtra(ScannerReceivers.DATA,"dfdfsdsfdsfsfs");
-//                sendBroadcast(intent);
-
                 break;
             case R.id.llyt_shop_list_filter_filter:
                 if (dltFilterContent.isDrawerOpen(Gravity.RIGHT)) {
@@ -815,9 +804,7 @@ public class ShopListActivity extends BaseActivity implements DrawerLayout.Drawe
 
             @Override
             public void onAnimationRepeat(Animation animation) {
-
             }
-
             // 动画的结束
             @Override
             public void onAnimationEnd(Animation animation) {

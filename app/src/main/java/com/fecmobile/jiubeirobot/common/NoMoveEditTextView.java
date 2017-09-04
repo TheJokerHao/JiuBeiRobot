@@ -21,7 +21,7 @@ import com.fecmobile.jiubeirobot.utils.L;
  * 修改备注  :
  */
 
-public class NoMoveEditTextView extends EditText {
+public class NoMoveEditTextView extends android.support.v7.widget.AppCompatEditText {
     private ScrollView scrollView;
 
     public void setScrollView(ScrollView scrollView) {

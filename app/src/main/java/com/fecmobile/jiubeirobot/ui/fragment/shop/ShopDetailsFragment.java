@@ -63,21 +63,6 @@ public class ShopDetailsFragment extends BaseFragment {
     BannerLayout blShopBanner;
     @BindView(R.id.iv_close)
     ImageView ivClose;
-//    @BindView(R.id.tv_wine_type)
-//    TextView tvWineType;//品类
-//    @BindView(R.id.tv_bilingual)
-//    TextView tvBilingual;//品牌中英文
-//    @BindView(R.id.tv_details_level)
-//    TextView tvDetailsLevel;//酒庄级别
-//    @BindView(R.id.tv_taste)
-//    TextView tvTaste;//口感分类
-//    @BindView(R.id.tv_from_ingesting)
-//    TextView tvFromIngesting;//建议醒酒时间
-//    @BindView(R.id.tv_from_temperature)
-//    TextView tvFromTemperature;//适宜温度
-//    @BindView(R.id.tv_from_suggest)
-//    TextView tvFromSuggest;//配餐建议
-
 
     //规格参数 所有绑定
     @BindView(R.id.tv_wine_type)
@@ -167,8 +152,6 @@ public class ShopDetailsFragment extends BaseFragment {
     CustomNumInputView cnivNum;
     @BindView(R.id.btn_buy)
     Button btnBuy;
-//    @BindView(R.id.tv_alcoholic_strength)//酒精度
-//    TextView tv_alcoholic_strength;
 
 
     private String id;
@@ -178,8 +161,6 @@ public class ShopDetailsFragment extends BaseFragment {
     ImageView ivhistory;//酒庄历史
     @BindView(R.id.iv_text_pic)
     ImageView textPic;//图文
-//    @BindView(R.id.iv_guige)
-//    ImageView ivguige;//规格参数
 
     //语音播放内容
     String ProductDescriptionH5;
@@ -242,14 +223,14 @@ public class ShopDetailsFragment extends BaseFragment {
     }
 
 
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        if (activity != null) {
-
-        }
-
-    }
+//    @Override
+//    public void onAttach(Activity activity) {
+//        super.onAttach(activity);
+//        if (activity != null) {
+//
+//        }
+//
+//    }
 
     @Override
     public void onSuccess(BaseBean bean, int flag) {

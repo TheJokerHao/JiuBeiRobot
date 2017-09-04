@@ -183,23 +183,16 @@ public class LocalBuyActivity extends BaseActivity implements XRecyclerView.Load
         pageUtils.setPageSize(10);//设置每页的大小
 
         dltFilterContent.addDrawerListener(this);
-
-
         dlShopConetnAndDetails.addDrawerListener(this);
 
         dlShopConetnAndDetails.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
 
         rvView.setLayoutManager(new GridLayoutManager(this, 2));//设置RecyclerView显示的格式   网格布局
 
-//        Drawable dividerDrawable = ContextCompat.getDrawable(this, R.drawable.divider_sample);
-//        rvView.addItemDecoration(rvView.new GridDividerItemDecoration(dividerDrawable));
-
-//        shopListAdaptet = new ShopListAdapter(this, dataLst);
 
         shopListAdaptet = new LocalBuyShopListAdapter(this, dataLst);
 
         //设置item的点击监听
-//        shopListAdaptet.setClickCell(this);
         shopListAdaptet.setLocalClickCell(this);
 
         rvView.setAdapter(shopListAdaptet);//设置适配器

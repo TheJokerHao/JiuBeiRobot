@@ -167,7 +167,7 @@ public class ManagerGroupActivity extends BaseActivity {
                  */
                 if (0 != WarehouseDoorCondition) {
                     DoorCondition_text.setText("仓门开启");//设置仓门文字内容
-                    DoorCondition_text.setTextColor(getResources().getColor(R.color.abcde));
+                    DoorCondition_text.setTextColor(getResources().getColor(R.color.abcdeother));
                 } else {
                     DoorCondition_text.setTextColor(getResources().getColor(R.color.default_status_abcd));
                     DoorCondition_text.setText("仓门正常");//设置仓门文字内容

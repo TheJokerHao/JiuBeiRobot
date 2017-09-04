@@ -129,7 +129,7 @@ public class LocalUserCheckOrderActivity extends BaseActivity {
     private List<StockBean> cardList = new ArrayList<>();//购物车
     private int shopTotalNum;//商品总数量
     private String shopTotalMoney;//商品总价
-    private String bid;//订单ID
+    //    private String bid;//订单ID
     private String customerId;
     List<LocalQueryAddressOtherBean> list;
 
@@ -154,7 +154,7 @@ public class LocalUserCheckOrderActivity extends BaseActivity {
 
     @Override
     public void initView() {
-        bid = getIntent().getStringExtra(Constants.INTENT_MEMBER_ID);
+//        bid = getIntent().getStringExtra(Constants.INTENT_MEMBER_ID);
         invoiceType.setIsHaveInvoice("1");
 
         String buyType = getIntent().getStringExtra(Constants.INTENT_NOW_BUY);
@@ -421,19 +421,19 @@ public class LocalUserCheckOrderActivity extends BaseActivity {
         }
     }
 
-    public void showEditShippingAddressReplace() {
-        if (editShippingAddressFragment == null) {
-            editShippingAddressFragment = new LocalEditShippingAddressFragment();
-        }
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frame_content, editShippingAddressFragment);
-        transaction.commit();
-        if (dlDrawer.isDrawerOpen(Gravity.RIGHT)) {
-            dlDrawer.closeDrawer(Gravity.RIGHT);
-        } else {
-            dlDrawer.openDrawer(Gravity.RIGHT);
-        }
-    }
+//    public void showEditShippingAddressReplace() {
+//        if (editShippingAddressFragment == null) {
+//            editShippingAddressFragment = new LocalEditShippingAddressFragment();
+//        }
+//        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//        transaction.replace(R.id.frame_content, editShippingAddressFragment);
+//        transaction.commit();
+//        if (dlDrawer.isDrawerOpen(Gravity.RIGHT)) {
+//            dlDrawer.closeDrawer(Gravity.RIGHT);
+//        } else {
+//            dlDrawer.openDrawer(Gravity.RIGHT);
+//        }
+//    }
 
     public void setAddrss(LocalQueryAddressOtherBean m) {
         L.i(m);

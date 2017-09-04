@@ -84,11 +84,6 @@ public class ScanResultActivity extends BaseActivity {
             default:
                 break;
         }
-//        if (bean != null) {
-//            BaseBean<ObjBean<ShopIDByBarcode>> mShopIDByBarcode = bean;
-//            String id = mShopIDByBarcode.getData().getObj().getId();
-//            Activitys.toShopListByType(this, id);
-//        }
         dismissHUD();
         finish();
     }
